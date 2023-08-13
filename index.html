@@ -1,93 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <!-- Font Poppins CDN -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Import file Style -->
-    <link href="./public/scss/style.css" rel="stylesheet" />
-    <title>Minisite</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <!-- Nav Menu -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<!-- Font Poppins CDN -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Import file Style -->
+		<link href="./public/scss/style.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Minisite</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<!-- Nav Menu -->
 
-    <div class="nav-menu fixed-top">
-      <ul class="nav-menu__block-dropdown">
-        <li class="nav-item active">giới thiệu</li>
-        <li class="nav-item">video</li>
-        <li class="nav-item">hình ảnh</li>
-        <li class="nav-item">gửi thư</li>
-        <li class="nav-item">countdown</li>
-        <li class="nav-item">đăng nhập</li>
-        <div class="btn-x">
-          <img src="./public//assets/icons/X icon.png" alt="x-icon" />
-        </div>
-      </ul>
+		<section class="nav-menu fixed-top">
+			<ul id="dropdown-menu" class="nav-menu__block-dropdown">
+				<li class="nav-item active">giới thiệu</li>
+				<li class="nav-item">video</li>
+				<li class="nav-item">hình ảnh</li>
+				<li class="nav-item">gửi thư</li>
+				<li class="nav-item">countdown</li>
+				<li class="nav-item">đăng nhập</li>
+				<div class="btn-x-menu">
+					<img src="./public/assets/icons/X icon.png" alt="x-icon" />
+				</div>
+			</ul>
+			<ul id="dropdown-account" class="nav-menu__block-dropdown">
+				<li class="nav-item active">đăng nhập</li>
+				<div style="height: 300px"></div>
+				<div class="btn-x-account">
+					<img src="./public/assets/icons/X icon.png" alt="x-icon" />
+				</div>
+			</ul>
 
-      <ul class="nav-menu__block">
-        <li id="btn-dropdown" class="nav-item">
-          <img src="./public/assets/icons/menu icon.png" alt="menu-icon" />
-        </li>
-        <li id="btn-logo" class="nav-item">
-          <img src="./public/assets/images/logo Cmazor.png" alt="menu-icon" />
-        </li>
-        <li id="btn-account" class="nav-item">
-          <img src="./public/assets/icons/login icon.png" alt="menu-icon" />
-        </li>
-      </ul>
-    </div>
+			<ul class="nav-menu__block">
+				<li id="btn-dropdown" class="nav-item">
+					<img src="./public/assets/icons/menu icon.png" alt="menu-icon" />
+				</li>
+				<li id="btn-logo" class="nav-item">
+					<img src="./public/assets/images/logo Cmazor.png" alt="menu-icon" />
+				</li>
+				<li id="btn-account" class="nav-item">
+					<img src="./public/assets/icons/login icon.png" alt="menu-icon" />
+				</li>
+			</ul>
+		</section>
 
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        const navMenuDropDown = document.querySelector(
-          ".nav-menu__block-dropdown"
-        );
-        const btnX = document.querySelector(".btn-x");
-        const btnDropdown = document.getElementById("btn-dropdown");
-        if (btnDropdown && navMenuDropDown && btnX) {
-          btnDropdown.onclick = () => {
-            navMenuDropDown.style.display = "block";
-            btnX.style.display = "block";
-            btnX.onclick = () => {
-              navMenuDropDown.style.display = "none";
-              btnX.style.display = "none";
-            };
-          };
-        }
-      });
+		<section class="main">
+			<!-- left -->
+			<div class="main__left">
+				<div class="text">
+					⎯⎯⎯⎯⎯⎯⎯⎯ &nbsp w e l c o m e &nbsp t o &nbsp o r a n g e &nbsp s p a c
+					e &nbsp ⎯⎯⎯⎯⎯⎯⎯⎯
+				</div>
+			</div>
+			<!-- center -->
+			<div class="main__center">
+				<div class="main__center__intro">
+					<img
+						class="banner"
+						src="./public/assets/images/art section 1.png"
+						alt="banner"
+					/>
+					<h1 class="title">Chào mừng bạn</h1>
+				</div>
+			</div>
+			<!-- right -->
+			<div class="main__right">
+				<div class="main__right__icon">
+					<i class="fa-solid fa-chevron-up"></i>
+				</div>
+				<ul class="main__right__menu">
+					<li class="nav-item active">giới thiệu</li>
+					<li class="nav-item">video</li>
+					<li class="nav-item">hình ảnh</li>
+					<li class="nav-item">gửi thư</li>
+					<li class="nav-item">countdown</li>
+				</ul>
+				<div class="main__right__icon">
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+			</div>
+		</section>
 
-      function openDropdown() {}
-    </script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {
+				const dropDownMenu = document.getElementById('dropdown-menu');
+				const dropAccount = document.getElementById('dropdown-account');
+
+				const btnXMenu = document.querySelector('.btn-x-menu');
+				const btnXAccount = document.querySelector('.btn-x-account');
+				const btnDropdown = document.getElementById('btn-dropdown');
+				const btnAccount = document.getElementById('btn-account');
+
+				if (btnDropdown && dropDownMenu && btnXMenu) {
+					btnDropdown.onclick = () => {
+						dropDownMenu.style.display = 'block';
+						btnXMenu.style.display = 'block';
+						btnXMenu.onclick = () => {
+							dropDownMenu.style.display = 'none';
+							btnXMenu.style.display = 'none';
+						};
+					};
+				}
+
+				if (btnAccount && dropAccount && btnXAccount) {
+					btnAccount.onclick = () => {
+						dropAccount.style.display = 'block';
+						btnXAccount.style.display = 'block';
+						btnXAccount.onclick = () => {
+							dropAccount.style.display = 'none';
+							btnXAccount.style.display = 'none';
+						};
+					};
+				}
+			});
+
+			function openDropdown() {}
+		</script>
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
