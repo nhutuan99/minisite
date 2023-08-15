@@ -1,414 +1,503 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <!-- Font Poppins CDN -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Import file Style -->
-    <link href="./public/scss/style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Minisite</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <!-- Nav Menu -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<!-- Font Poppins CDN -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Import file Style -->
+		<link href="./public/scss/style.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Minisite</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<!-- Nav Menu -->
 
-    <section class="nav-menu fixed-top">
-      <ul id="dropdown-menu" class="nav-menu__block-dropdown">
-        <li class="nav-item active">giới thiệu</li>
-        <li class="nav-item">video</li>
-        <li class="nav-item">hình ảnh</li>
-        <li class="nav-item">gửi thư</li>
-        <li class="nav-item">countdown</li>
-        <li class="nav-item">đăng nhập</li>
-        <div class="btn-x-menu">
-          <img src="./public/assets/icons/X icon.png" alt="x-icon" />
-        </div>
-      </ul>
-      <ul id="dropdown-account" class="nav-menu__block-dropdown">
-        <li class="nav-item active">đăng nhập</li>
-        <div style="height: 300px"></div>
-        <div class="btn-x-account">
-          <img src="./public/assets/icons/X icon.png" alt="x-icon" />
-        </div>
-      </ul>
+		<section class="nav-menu fixed-top">
+			<ul id="dropdown-menu" class="nav-menu__block-dropdown">
+				<li class="nav-item active">giới thiệu</li>
+				<li class="nav-item">video</li>
+				<li class="nav-item">hình ảnh</li>
+				<li class="nav-item">gửi thư</li>
+				<li class="nav-item">countdown</li>
+				<li class="nav-item">đăng nhập</li>
+				<div class="btn-x-menu">
+					<img src="./public/assets/icons/X icon.png" alt="x-icon" />
+				</div>
+			</ul>
+			<ul id="dropdown-account" class="nav-menu__block-dropdown">
+				<li class="nav-item active">đăng nhập</li>
+				<div style="height: 300px"></div>
+				<div class="btn-x-account">
+					<img src="./public/assets/icons/X icon.png" alt="x-icon" />
+				</div>
+			</ul>
 
-      <ul class="nav-menu__block">
-        <li id="btn-dropdown" class="nav-item">
-          <img src="./public/assets/icons/menu icon.png" alt="menu-icon" />
-        </li>
-        <li id="btn-logo" class="nav-item">
-          <img src="./public/assets/images/logo Cmazor.png" alt="menu-icon" />
-        </li>
-        <li id="btn-account" class="nav-item">
-          <img src="./public/assets/icons/login icon.png" alt="menu-icon" />
-        </li>
-      </ul>
-    </section>
+			<ul class="nav-menu__block">
+				<li id="btn-dropdown" class="nav-item">
+					<img src="./public/assets/icons/menu icon.png" alt="menu-icon" />
+				</li>
+				<li id="btn-logo" class="nav-item">
+					<img src="./public/assets/images/logo Cmazor.png" alt="menu-icon" />
+				</li>
+				<li id="btn-account" class="nav-item">
+					<img src="./public/assets/icons/login icon.png" alt="menu-icon" />
+				</li>
+			</ul>
+		</section>
 
-    <section class="main">
-      <!-- left -->
-      <div class="main__left">
-        <div class="text">
-          ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ &nbsp w e l c o m e &nbsp t o &nbsp o r a n g
-          e &nbsp s p a c e &nbsp ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
-        </div>
-        <img src="./public/assets/icons/orange icon.png" alt="orange icon" />
-      </div>
-      <!-- center -->
-      <div class="main__center">
-        <div class="main__center__intro">
-          <img
-            class="banner"
-            src="./public/assets/images/art section 1.png"
-            alt="banner"
-          />
-          <h1 class="title">Chào mừng bạn</h1>
-          <p class="description">
-            đến kho cảm xúc của Orange! Có lẽ mỗi chúng ta, ai cũng mang trong
-            mình những tổn thương riêng, và tất nhiên Orange cũng vậy. Khi bạn
-            ghé thăm kho cảm xúc này, Orange mong bạn cũng có thể viết ra những
-            điều đang khiến bạn mệt nhoài. Mong rằng điều đó sẽ khiến những mảnh
-            vỡ trong tâm hồn bạn có thể được chữa lành hoặc ít nhất khiến bạn
-            cảm thấy ổn hơn.
-          </p>
-          <div class="arrow-down">
-            <img src="./public/assets/icons/arrow down.png" alt="arrow-down" />
-          </div>
-        </div>
-        <div class="main__center__about-album">
-          <div class="row justify-content-md-center">
-            <div class="col-md-6">
-              <div class="left">
-                <h1 class="title">Về album <br />"Nhưng"</h1>
-                <p class="description">
-                  Album lần này là bức tranh của những cung bậc cảm xúc, là bản
-                  tình ca của một chuyện tình tan vỡ, là những cảm xúc thật thà
-                  của một cô gái dành cho cô gái mới của chàng trai, là những
-                  tiếc nuối với tình cảm gia đình, là đối diện với bản ngã của
-                  chính mình, đấu tranh và ôm lấy tổn thương để chữa lành.
-                  <br />
-                  <br />
-                  Nếu bạn thấy hình bóng của mình ở trong những câu chuyện ấy,
-                  thì Orange mong bạn biết rằng bạn không hề đơn độc, và hy vọng
-                  những ca khúc trong album có thể xoa dịu những tổn thương mà
-                  bạn đang trải qua. Ở Nhật Bản, khi một cái bát bị nứt vỡ, họ
-                  dùng vàng gắn lại những mảnh vỡ để tạo thành một tác phẩm nghệ
-                  thuật mới. Cũng như vậy, dù trải qua bao nhiêu thương tổn, thì
-                  hãy nhớ rằng bạn luôn tuyệt vời, bằng cách này hoặc cách khác.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="right">
-                <img
-                  src="./public/assets/images/hình cover section 2.png"
-                  alt="orange"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main__center__timeline">
-          <h1 class="title">Timeline</h1>
-          <div class="all-content">
-            <div class="content">
-              <div class="event">
-                <span>Ep1 series Cam’On</span>
-              </div>
-              <div class="time">
-                <div class="time-box">
-                  <div class="time-text">31.08</div>
-                </div>
-                <div class="line"></div>
-              </div>
-              <div style="width: 320px"></div>
-            </div>
-            <div class="content">
-              <div style="width: 320px"></div>
-              <div class="time">
-                <div class="time-box">
-                  <div class="time-text text-center">
-                    04.09
-                    <br />
-                    08.09
-                  </div>
-                </div>
-                <div class="line"></div>
-              </div>
-              <div class="event">
-                <span>Teaser MV ‘Có đau thì đau một mình’</span>
-              </div>
-            </div>
-            <div class="content">
-              <div class="event text-white">
-                <span>MV ‘Có đau thì đau một mình’ & Minisite</span>
-              </div>
-              <div class="time">
-                <div class="time-box">
-                  <div class="time-text text-color">14.09</div>
-                </div>
-                <div class="line"></div>
-              </div>
-              <div style="width: 320px"></div>
-            </div>
-            <div class="content">
-              <div style="width: 320px"></div>
-              <div class="time">
-                <div class="time-box">
-                  <div class="time-text text-color">21.09</div>
-                </div>
-                <div class="line"></div>
-              </div>
-              <div class="event text-white">
-                <span>Ep2 series Cam’On + 1 audio</span>
-              </div>
-            </div>
-            <div class="content">
-              <div class="event text-white">
-                <span>Ra mắt ep3 series Cam’On & 1 audio</span>
-              </div>
-              <div class="time">
-                <div class="time-box">
-                  <div class="time-text text-color">28.09</div>
-                </div>
-                <div class="line"></div>
-              </div>
-              <div style="width: 320px"></div>
-            </div>
-            <div class="content">
-              <div style="width: 320px"></div>
-              <div class="time">
-                <div class="time-box">
-                  <div class="time-text text-color">05.10</div>
-                </div>
-                <div class="line"></div>
-              </div>
-              <div class="event text-white">
-                <span>Showcase Cam’On + Full Album Release</span>
-              </div>
-            </div>
-            <div class="content">
-              <div style="width: 320px"></div>
-              <div class="time">
-                <div class="time-box">
-                  <div class="time-text text-color text-center">
-                    09.10
-                    <br />
-                    13.10
-                  </div>
-                </div>
-              </div>
-              <div style="width: 320px"></div>
-            </div>
+		<section class="main">
+			<!-- left -->
+			<div class="main__left">
+				<div class="text">
+					⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ &nbsp w e l c o m e &nbsp t o &nbsp o r a n g e &nbsp s
+					p a c e &nbsp ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+				</div>
+				<img src="./public/assets/icons/orange icon.png" alt="orange icon" />
+			</div>
+			<!-- center -->
+			<div class="main__center">
+				<div class="main__center__intro">
+					<img
+						class="banner"
+						src="./public/assets/images/art section 1.png"
+						alt="banner"
+					/>
+					<h1 class="title">Chào mừng bạn</h1>
+					<p class="description">
+						đến kho cảm xúc của Orange! Có lẽ mỗi chúng ta, ai cũng mang trong
+						mình những tổn thương riêng, và tất nhiên Orange cũng vậy. Khi bạn
+						ghé thăm kho cảm xúc này, Orange mong bạn cũng có thể viết ra những
+						điều đang khiến bạn mệt nhoài. Mong rằng điều đó sẽ khiến những mảnh
+						vỡ trong tâm hồn bạn có thể được chữa lành hoặc ít nhất khiến bạn
+						cảm thấy ổn hơn.
+					</p>
+					<div class="arrow-down">
+						<img src="./public/assets/icons/arrow down.png" alt="arrow-down" />
+					</div>
+				</div>
+				<div class="main__center__about-album">
+					<div class="row justify-content-md-center">
+						<div class="col-md-6">
+							<div class="left">
+								<h1 class="title">Về album <br />"Nhưng"</h1>
+								<p class="description">
+									Album lần này là bức tranh của những cung bậc cảm xúc, là bản
+									tình ca của một chuyện tình tan vỡ, là những cảm xúc thật thà
+									của một cô gái dành cho cô gái mới của chàng trai, là những
+									tiếc nuối với tình cảm gia đình, là đối diện với bản ngã của
+									chính mình, đấu tranh và ôm lấy tổn thương để chữa lành.
+									<br />
+									<br />
+									Nếu bạn thấy hình bóng của mình ở trong những câu chuyện ấy,
+									thì Orange mong bạn biết rằng bạn không hề đơn độc, và hy vọng
+									những ca khúc trong album có thể xoa dịu những tổn thương mà
+									bạn đang trải qua. Ở Nhật Bản, khi một cái bát bị nứt vỡ, họ
+									dùng vàng gắn lại những mảnh vỡ để tạo thành một tác phẩm nghệ
+									thuật mới. Cũng như vậy, dù trải qua bao nhiêu thương tổn, thì
+									hãy nhớ rằng bạn luôn tuyệt vời, bằng cách này hoặc cách khác.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="right">
+								<img
+									src="./public/assets/images/hình cover section 2.png"
+									alt="orange"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__timeline">
+					<h1 class="title">Timeline</h1>
+					<div class="all-content">
+						<div class="content">
+							<div class="event">
+								<span>Ep1 series Cam’On</span>
+							</div>
+							<div class="time">
+								<div class="time-box">
+									<div class="time-text">31.08</div>
+								</div>
+								<div class="line"></div>
+							</div>
+							<div style="width: 320px"></div>
+						</div>
+						<div class="content">
+							<div style="width: 320px"></div>
+							<div class="time">
+								<div class="time-box">
+									<div class="time-text text-center">
+										04.09
+										<br />
+										08.09
+									</div>
+								</div>
+								<div class="line"></div>
+							</div>
+							<div class="event">
+								<span>Teaser MV ‘Có đau thì đau một mình’</span>
+							</div>
+						</div>
+						<div class="content">
+							<div class="event text-white">
+								<span>MV ‘Có đau thì đau một mình’ & Minisite</span>
+							</div>
+							<div class="time">
+								<div class="time-box">
+									<div class="time-text text-color">14.09</div>
+								</div>
+								<div class="line"></div>
+							</div>
+							<div style="width: 320px"></div>
+						</div>
+						<div class="content">
+							<div style="width: 320px"></div>
+							<div class="time">
+								<div class="time-box">
+									<div class="time-text text-color">21.09</div>
+								</div>
+								<div class="line"></div>
+							</div>
+							<div class="event text-white">
+								<span>Ep2 series Cam’On + 1 audio</span>
+							</div>
+						</div>
+						<div class="content">
+							<div class="event text-white">
+								<span>Ra mắt ep3 series Cam’On & 1 audio</span>
+							</div>
+							<div class="time">
+								<div class="time-box">
+									<div class="time-text text-color">28.09</div>
+								</div>
+								<div class="line"></div>
+							</div>
+							<div style="width: 320px"></div>
+						</div>
+						<div class="content">
+							<div style="width: 320px"></div>
+							<div class="time">
+								<div class="time-box">
+									<div class="time-text text-color">05.10</div>
+								</div>
+								<div class="line"></div>
+							</div>
+							<div class="event text-white">
+								<span>Showcase Cam’On + Full Album Release</span>
+							</div>
+						</div>
+						<div class="content">
+							<div style="width: 320px"></div>
+							<div class="time">
+								<div class="time-box">
+									<div class="time-text text-color text-center">
+										09.10
+										<br />
+										13.10
+									</div>
+								</div>
+							</div>
+							<div style="width: 320px"></div>
+						</div>
 
-            <div class="final-content">Stage Performance</div>
-          </div>
-        </div>
-        <div class="main__center__video-gallery">
-          <img
-            class="banner-video-gallery"
-            src="./public/assets/images/art section video.png"
-            alt="video-banner"
-          />
-          <div class="text-center mt-5">
-            <iframe
-              width="90%"
-              height="800"
-              src="https://www.youtube.com/embed/5yjrKvSYCo8?controls=0&amp;start=4"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-        <div class="main__center__image-gallery">
-          <img
-            class="banner-image-gallery"
-            src="./public/assets/images/art section photo.png"
-            alt="video-banner"
-          />
-          <div class="d-flex flex-wrap justify-content-around text-center mt-5">
-            <div class="image-box">
-              <img src="./public/assets/images/hinh demo 1.png" />
-            </div>
-            <div class="image-box">
-              <img src="./public/assets/images/hinh demo 2.png" />
-            </div>
-          </div>
-          <div class="btn-see-all">
-            <span>Xem tất cả <i class="fa-solid fa-arrow-right ml-2"></i></span>
-          </div>
-        </div>
-        <div class="main__center__emotion">
-          <h1 class="title">Trạm cảm xúc</h1>
-          <div class="btn-send">
-            <span>
-              Gửi gì đó cho Cam <i class="fa-solid fa-arrow-right ml-2"> </i>
-            </span>
-          </div>
-        </div>
-        <div class="main__center__shopping">
-          <div class="row justify-content-md-center">
-            <div class="col-md-6">
-              <h1 class="title">Shopping</h1>
-              <div class="image-box">
-                <img
-                  src="./public/assets/images/album box.png"
-                  alt="ablum-box"
-                />
-              </div>
-              <div class="btn-buy">
-                <span>
-                  Shopping now <i class="fa-solid fa-arrow-right ml-2"> </i>
-                </span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="image-box">
-                <img
-                  src="./public/assets/images/art shopping.png"
-                  alt="shopping"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main__center__countdown">
-          <div class="box-countdown">
-            <img
-              src="./public/assets/images/art section countdown.png"
-              alt="countdown"
-            />
-            <p id="countdown"></p>
-            <div class="special-thing">
-              <span>Orange có 1 điều bất ngờ dành cho bạn!</span>
-            </div>
-          </div>
-        </div>
-        <div class="main__center__social">
-          <div class="box-social">
-            <h1 class="title">Download / Stream Album</h1>
-            <div class="background">
-              <div class="text">
-                ALBUM
-                <br />
-                COVER
-              </div>
-              <div class="icon-social"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- right -->
-      <div class="main__right">
-        <div class="main__right__icon">
-          <i class="fa-solid fa-chevron-up"></i>
-        </div>
-        <ul class="main__right__menu">
-          <li class="nav-item active">giới thiệu</li>
-          <li class="nav-item">video</li>
-          <li class="nav-item">hình ảnh</li>
-          <li class="nav-item">gửi thư</li>
-          <li class="nav-item">countdown</li>
-        </ul>
-        <div class="main__right__icon">
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <img src="./public/assets/icons/disk icon.png" alt="disk icon" />
-      </div>
-    </section>
+						<div class="final-content">Stage Performance</div>
+					</div>
+				</div>
+				<div class="main__center__video-gallery">
+					<img
+						class="banner-video-gallery"
+						src="./public/assets/images/art section video.png"
+						alt="video-banner"
+					/>
+					<div class="text-center mt-5">
+						<iframe
+							width="90%"
+							height="800"
+							src="https://www.youtube.com/embed/5yjrKvSYCo8?controls=0&amp;start=4"
+							title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
+				<div class="main__center__image-gallery">
+					<img
+						class="banner-image-gallery"
+						src="./public/assets/images/art section photo.png"
+						alt="video-banner"
+					/>
+					<div class="d-flex flex-wrap justify-content-around text-center mt-5">
+						<div class="image-box">
+							<img src="./public/assets/images/hinh demo 1.png" />
+						</div>
+						<div class="image-box">
+							<img src="./public/assets/images/hinh demo 2.png" />
+						</div>
+					</div>
+					<div class="btn-see-all">
+						<span>Xem tất cả <i class="fa-solid fa-arrow-right ml-2"></i></span>
+					</div>
+				</div>
+				<div class="main__center__emotion">
+					<h1 class="title">Trạm cảm xúc</h1>
+					<div class="btn-send">
+						<span>
+							Gửi gì đó cho Cam <i class="fa-solid fa-arrow-right ml-2"> </i>
+						</span>
+					</div>
+				</div>
+				<div class="main__center__shopping">
+					<div class="row justify-content-md-center">
+						<div class="col-md-6">
+							<h1 class="title">Shopping</h1>
+							<div class="image-box">
+								<img
+									src="./public/assets/images/album box.png"
+									alt="ablum-box"
+								/>
+							</div>
+							<div class="btn-buy">
+								<span>
+									Shopping now <i class="fa-solid fa-arrow-right ml-2"> </i>
+								</span>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="image-box">
+								<img
+									src="./public/assets/images/art shopping.png"
+									alt="shopping"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__countdown">
+					<div class="box-countdown">
+						<img
+							src="./public/assets/images/art section countdown.png"
+							alt="countdown"
+						/>
+						<p id="countdown"></p>
+						<div class="special-thing">
+							<span>Orange có 1 điều bất ngờ dành cho bạn!</span>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__social">
+					<div class="box-social">
+						<h1 class="title">Download / Stream Album</h1>
+						<div class="background">
+							<div class="text">
+								ALBUM
+								<br />
+								COVER
+							</div>
+							<div class="wrapper-social">
+								<div class="wrapper-social__block">
+									<div class="wrapper-social__block__item">
+										<div class="info">
+											<div class="img-box">
+												<i
+													class="fa-brands fa-youtube fa-xl"
+													style="color: #ff0200"
+												></i>
+											</div>
+											<div class="text-box">
+												<span>Watch on</span>
+												<br />
+												<span>YouTube</span>
+											</div>
+										</div>
+										<div class="icon">
+											<i
+												class="fa-regular fa-circle-play fa-2xl"
+												style="color: #234ec3"
+											></i>
+										</div>
+									</div>
+									<div class="wrapper-social__block__item">
+										<div class="info">
+											<div class="img-box">
+												<i
+													class="fa-regular fa-circle-play fa-xl"
+													style="color: #ff0200"
+												></i>
+											</div>
+											<div class="text-box">
+												<span>Listen on</span>
+												<br />
+												<span>YouTube Music</span>
+											</div>
+										</div>
+										<div class="icon">
+											<i
+												class="fa-regular fa-circle-play fa-2xl"
+												style="color: #234ec3"
+											></i>
+										</div>
+									</div>
+								</div>
+								<div class="wrapper-social__block">
+									<div class="wrapper-social__block__item">
+										<div class="info">
+											<div class="img-box">
+												<i
+													class="fa-brands fa-spotify fa-xl"
+													style="color: #19ad6a"
+												></i>
+											</div>
+											<div class="text-box">
+												<span>Listen on</span>
+												<br />
+												<span>Spotify</span>
+											</div>
+										</div>
+										<div class="icon">
+											<i
+												class="fa-regular fa-circle-play fa-2xl"
+												style="color: #234ec3"
+											></i>
+										</div>
+									</div>
+									<div class="wrapper-social__block__item">
+										<div class="info">
+											<div class="img-box">
+												<i
+													class="fa-solid fa-music fa-xl"
+													style="color: #fa344a"
+												></i>
+											</div>
+											<div class="text-box">
+												<span>Listen on</span>
+												<br />
+												<span>Apple Music</span>
+											</div>
+										</div>
+										<div class="icon">
+											<i
+												class="fa-regular fa-circle-play fa-2xl"
+												style="color: #234ec3"
+											></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- right -->
+			<div class="main__right">
+				<div class="main__right__icon">
+					<i class="fa-solid fa-chevron-up"></i>
+				</div>
+				<ul class="main__right__menu">
+					<li class="nav-item active">giới thiệu</li>
+					<li class="nav-item">video</li>
+					<li class="nav-item">hình ảnh</li>
+					<li class="nav-item">gửi thư</li>
+					<li class="nav-item">countdown</li>
+				</ul>
+				<div class="main__right__icon">
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<img src="./public/assets/icons/disk icon.png" alt="disk icon" />
+			</div>
+		</section>
 
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        const dropDownMenu = document.getElementById("dropdown-menu");
-        const dropAccount = document.getElementById("dropdown-account");
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {
+				const dropDownMenu = document.getElementById('dropdown-menu');
+				const dropAccount = document.getElementById('dropdown-account');
 
-        const btnXMenu = document.querySelector(".btn-x-menu");
-        const btnXAccount = document.querySelector(".btn-x-account");
-        const btnDropdown = document.getElementById("btn-dropdown");
-        const btnAccount = document.getElementById("btn-account");
+				const btnXMenu = document.querySelector('.btn-x-menu');
+				const btnXAccount = document.querySelector('.btn-x-account');
+				const btnDropdown = document.getElementById('btn-dropdown');
+				const btnAccount = document.getElementById('btn-account');
 
-        if (btnDropdown && dropDownMenu && btnXMenu) {
-          btnDropdown.onclick = () => {
-            dropDownMenu.style.display = "block";
-            btnXMenu.style.display = "block";
-            btnXMenu.onclick = () => {
-              dropDownMenu.style.display = "none";
-              btnXMenu.style.display = "none";
-            };
-          };
-        }
+				if (btnDropdown && dropDownMenu && btnXMenu) {
+					btnDropdown.onclick = () => {
+						dropDownMenu.style.display = 'block';
+						btnXMenu.style.display = 'block';
+						btnXMenu.onclick = () => {
+							dropDownMenu.style.display = 'none';
+							btnXMenu.style.display = 'none';
+						};
+					};
+				}
 
-        if (btnAccount && dropAccount && btnXAccount) {
-          btnAccount.onclick = () => {
-            dropAccount.style.display = "block";
-            btnXAccount.style.display = "block";
-            btnXAccount.onclick = () => {
-              dropAccount.style.display = "none";
-              btnXAccount.style.display = "none";
-            };
-          };
-        }
+				if (btnAccount && dropAccount && btnXAccount) {
+					btnAccount.onclick = () => {
+						dropAccount.style.display = 'block';
+						btnXAccount.style.display = 'block';
+						btnXAccount.onclick = () => {
+							dropAccount.style.display = 'none';
+							btnXAccount.style.display = 'none';
+						};
+					};
+				}
 
-        // Set the date we're counting down to
-        var countDownDate = new Date("Oct 13, 2023 15:37:25").getTime();
+				// Set the date we're counting down to
+				var countDownDate = new Date('Oct 13, 2023 15:37:25').getTime();
 
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-          // Get today's date and time
-          var now = new Date().getTime();
+				// Update the count down every 1 second
+				var x = setInterval(function () {
+					// Get today's date and time
+					var now = new Date().getTime();
 
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
+					// Find the distance between now and the count down date
+					var distance = countDownDate - now;
 
-          // Time calculations for days, hours, minutes and seconds
-          var days =
-            Math.floor(distance / (1000 * 60 * 60 * 24)) < 10
-              ? "0" + Math.floor(distance / (1000 * 60 * 60 * 24))
-              : Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours =
-            Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) <
-            10
-              ? "0" +
-                Math.floor(
-                  (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-                )
-              : Math.floor(
-                  (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-                );
-          var minutes =
-            Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10
-              ? "0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-              : Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds =
-            Math.floor((distance % (1000 * 60)) / 1000) < 10
-              ? "0" + Math.floor((distance % (1000 * 60)) / 1000)
-              : Math.floor((distance % (1000 * 60)) / 1000);
+					// Time calculations for days, hours, minutes and seconds
+					var days =
+						Math.floor(distance / (1000 * 60 * 60 * 24)) < 10
+							? '0' + Math.floor(distance / (1000 * 60 * 60 * 24))
+							: Math.floor(distance / (1000 * 60 * 60 * 24));
+					var hours =
+						Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) <
+						10
+							? '0' +
+							  Math.floor(
+									(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+							  )
+							: Math.floor(
+									(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+							  );
+					var minutes =
+						Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10
+							? '0' + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+							: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					var seconds =
+						Math.floor((distance % (1000 * 60)) / 1000) < 10
+							? '0' + Math.floor((distance % (1000 * 60)) / 1000)
+							: Math.floor((distance % (1000 * 60)) / 1000);
 
-          // Display the result in the element with id="countdown"
-          document.getElementById("countdown").innerHTML = `<div class="row">
+					// Display the result in the element with id="countdown"
+					document.getElementById('countdown').innerHTML = `<div class="row">
                 <div class="wrapper-item col-lg-6">
                   <div class="item">
                     <div class="time">${days}</div>
@@ -430,24 +519,24 @@
                   </div>  
                 </div>    
             </div>`;
-        }, 1000);
-      });
-    </script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+				}, 1000);
+			});
+		</script>
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
