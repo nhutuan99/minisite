@@ -296,10 +296,29 @@
           </div>
         </div>
         <div class="main__center__countdown">
-          <img
-            src="./public/assets/images/art section countdown.png"
-            alt="countdown"
-          />
+          <div class="box-countdown">
+            <img
+              src="./public/assets/images/art section countdown.png"
+              alt="countdown"
+            />
+            <p id="countdown"></p>
+            <div class="special-thing">
+              <span>Orange có 1 điều bất ngờ dành cho bạn!</span>
+            </div>
+          </div>
+        </div>
+        <div class="main__center__social">
+          <div class="box-social">
+            <h1 class="title">Download / Stream Album</h1>
+            <div class="background">
+              <div class="text">
+                ALBUM
+                <br />
+                COVER
+              </div>
+              <div class="icon-social"></div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- right -->
@@ -352,9 +371,67 @@
             };
           };
         }
-      });
 
-      function openDropdown() {}
+        // Set the date we're counting down to
+        var countDownDate = new Date("Oct 13, 2023 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+          // Get today's date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days =
+            Math.floor(distance / (1000 * 60 * 60 * 24)) < 10
+              ? "0" + Math.floor(distance / (1000 * 60 * 60 * 24))
+              : Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours =
+            Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) <
+            10
+              ? "0" +
+                Math.floor(
+                  (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                )
+              : Math.floor(
+                  (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                );
+          var minutes =
+            Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) < 10
+              ? "0" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+              : Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds =
+            Math.floor((distance % (1000 * 60)) / 1000) < 10
+              ? "0" + Math.floor((distance % (1000 * 60)) / 1000)
+              : Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Display the result in the element with id="countdown"
+          document.getElementById("countdown").innerHTML = `<div class="row">
+                <div class="wrapper-item col-lg-6">
+                  <div class="item">
+                    <div class="time">${days}</div>
+                    <p class="text">ngày</p>
+                  </div>
+                  <div class="item">
+                    <div class="time">${hours}</div>
+                    <p class="text">giờ</p>
+                  </div>  
+                </div>    
+                <div class="wrapper-item col-lg-6">
+                  <div class="item">
+                    <div class="time">${minutes}</div>
+                    <p class="text">phút</p>
+                  </div>
+                  <div class="item">
+                    <div class="time">${seconds}</div>
+                    <p class="text">giây</p>
+                  </div>  
+                </div>    
+            </div>`;
+        }, 1000);
+      });
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
