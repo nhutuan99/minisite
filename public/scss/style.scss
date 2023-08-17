@@ -45,6 +45,7 @@
 }
 
 // Custom Css
+
 body {
   width: 100%;
   height: 100%;
@@ -83,8 +84,11 @@ body {
     padding: 0;
     .nav-item {
       margin: 2% auto;
-      color: #272b3a;
       font-size: 24px;
+      a {
+        text-decoration: none;
+        color: #272b3a;
+      }
     }
     .btn-x-menu {
       display: none;
@@ -296,6 +300,7 @@ body {
       margin-top: 3%;
       margin-left: auto;
       margin-right: auto;
+      position: relative;
       h1.title {
         font-family: "Ribes-Black";
         font-size: 62px;
@@ -531,15 +536,23 @@ body {
       list-style-type: none;
       text-align: center;
       li {
-        margin: 20px 0;
+        margin: 30% 0;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+          color: #272b3a;
+          &:hover {
+            opacity: 0.9;
+          }
+        }
       }
     }
     &__icon {
       i.fa-chevron-up {
-        margin-bottom: 20px;
+        margin-bottom: 30%;
       }
       i.fa-chevron-down {
-        margin-top: 20px;
+        margin-top: 30%;
       }
     }
     img {
@@ -559,8 +572,73 @@ body {
   display: none;
 }
 
+.show-mobile {
+  display: none;
+}
+
 ::-webkit-scrollbar {
   display: none;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-slide {
+  display: flex;
+  padding: 0 14%;
+  img {
+    max-width: 100%;
+  }
+}
+
+// Swiper Style
+.main__center__emotion {
+  .swiper-slide .col {
+    padding: 5%;
+    margin: 3%;
+    border: 1px solid #1b1e26;
+    background: #000000;
+    height: 423px;
+    overflow: hidden;
+    h1 {
+      width: 100%;
+      font-weight: 500;
+      text-align: left;
+      font-size: 18px;
+      padding-bottom: 4%;
+      border-bottom: 1px solid #1b1e26;
+    }
+    p {
+      padding-top: 4%;
+      font-size: 16px;
+      font-weight: 350;
+      color: #fff;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 11;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+
+.main__center__image-gallery,
+.main__center__video-gallery {
+  .swiper-slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      padding: 0 2%;
+      cursor: pointer;
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -583,6 +661,62 @@ body {
     }
     &__right {
       display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    background-image: url("../assets/images-mobile/BG.jpg");
+    overflow: hidden;
+  }
+  .show-mobile {
+    display: block;
+  }
+  .hide-mobile {
+    display: none;
+  }
+
+  .main__center__intro {
+    h1.title {
+      font-size: 36px;
+    }
+    .arrow-down {
+      margin-top: 6%;
+    }
+    .description {
+      font-weight: 300;
+    }
+  }
+
+  .main__center__about-album {
+    .left {
+      h1.title {
+        margin-left: 10%;
+        text-align: left;
+        font-size: 56px;
+      }
+    }
+  }
+
+  .main__center__timeline {
+    .all-content {
+      .content {
+        height: 120px;
+        .time {
+          margin-right: 3%;
+          .line {
+            height: 31px;
+          }
+        }
+        .event {
+          width: 230px;
+          padding: 8px 10px;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 }

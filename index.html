@@ -18,7 +18,14 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Swiper Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <!-- Font Poppins CDN -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
@@ -35,6 +42,9 @@
     />
     <title>Minisite</title>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       .modal-wrapper {
         width: 100%;
         height: 100%;
@@ -45,7 +55,7 @@
       /*  modal */
       .modal-content {
         padding: 20px;
-        background-color: transparent;
+        background-color: #000;
       }
       .modal-title {
         color: #fff;
@@ -111,11 +121,13 @@
 
     <section class="nav-menu fixed-top">
       <ul id="dropdown-menu" class="nav-menu__block-dropdown">
-        <li class="nav-item active">giới thiệu</li>
-        <li class="nav-item">video</li>
-        <li class="nav-item">hình ảnh</li>
-        <li class="nav-item">gửi thư</li>
-        <li class="nav-item">countdown</li>
+        <li class="nav-item">
+          <a href="#intro-block" class="active">giới thiệu</a>
+        </li>
+        <li class="nav-item"><a href="#video-block">video</a></li>
+        <li class="nav-item"><a href="#image-block">hình ảnh</a></li>
+        <li class="nav-item"><a href="#send-mess-block">gửi thư</a></li>
+        <li class="nav-item"><a href="#count-down-block">countdown</a></li>
         <li class="nav-item">đăng nhập</li>
         <div class="btn-x-menu">
           <img src="./public/assets/icons/X icon.png" alt="x-icon" />
@@ -153,10 +165,15 @@
       </div>
       <!-- center -->
       <div class="main__center">
-        <div class="main__center__intro">
+        <div id="intro-block" class="main__center__intro">
           <img
-            class="banner"
+            class="banner hide-mobile"
             src="./public/assets/images/art section 1.png"
+            alt="banner"
+          />
+          <img
+            class="banner show-mobile"
+            src="./public/assets/images-mobile/art section 1.png"
             alt="banner"
           />
           <h1 class="title">Chào mừng bạn</h1>
@@ -207,7 +224,7 @@
         </div>
         <div class="main__center__timeline">
           <h1 class="title">Timeline</h1>
-          <div class="all-content">
+          <div class="all-content hide-mobile">
             <div class="content">
               <div class="event">
                 <span>Ep1 series Cam’On</span>
@@ -300,38 +317,192 @@
 
             <div class="final-content">Stage Performance</div>
           </div>
+          <div class="all-content show-mobile">
+            <div class="content">
+              <div class="time">
+                <div class="time-box">
+                  <div class="time-text">31.08</div>
+                </div>
+                <div class="line"></div>
+              </div>
+              <div class="event">
+                <span>Ep1 series Cam’On</span>
+              </div>
+            </div>
+            <div class="content">
+              <div class="time">
+                <div class="time-box">
+                  <div class="time-text text-center">
+                    04.09
+                    <br />
+                    08.09
+                  </div>
+                </div>
+                <div class="line"></div>
+              </div>
+              <div class="event">
+                <span>Teaser MV ‘Có đau thì đau một mình’</span>
+              </div>
+            </div>
+            <div class="content">
+              <div class="time">
+                <div class="time-box">
+                  <div class="time-text text-color">14.09</div>
+                </div>
+                <div class="line"></div>
+              </div>
+              <div class="event text-white">
+                <span>MV ‘Có đau thì đau một mình’ & Minisite</span>
+              </div>
+            </div>
+            <div class="content">
+              <div class="time">
+                <div class="time-box">
+                  <div class="time-text text-color">21.09</div>
+                </div>
+                <div class="line"></div>
+              </div>
+              <div class="event text-white">
+                <span>Ep2 series Cam’On + 1 audio</span>
+              </div>
+            </div>
+            <div class="content">
+              <div class="time">
+                <div class="time-box">
+                  <div class="time-text text-color">28.09</div>
+                </div>
+                <div class="line"></div>
+              </div>
+              <div class="event text-white">
+                <span>Ra mắt ep3 series Cam’On & 1 audio</span>
+              </div>
+            </div>
+            <div class="content">
+              <div class="time">
+                <div class="time-box">
+                  <div class="time-text text-color">05.10</div>
+                </div>
+                <div class="line"></div>
+              </div>
+              <div class="event text-white">
+                <span>Showcase Cam’On + Full Album Release</span>
+              </div>
+            </div>
+            <div class="content">
+              <div class="time">
+                <div class="time-box">
+                  <div class="time-text text-color text-center">
+                    09.10
+                    <br />
+                    13.10
+                  </div>
+                </div>
+              </div>
+              <div
+                class="event"
+                style="
+                  border: 1px solid #2a65fd;
+                  text-align: center;
+                  color: #2a65fd;
+                "
+              >
+                Stage Performance
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="main__center__video-gallery">
+        <div id="video-block" class="main__center__video-gallery">
           <img
-            class="banner-video-gallery"
+            class="banner-video-gallery hide-mobile"
             src="./public/assets/images/art section video.png"
+            alt="video-banner"
+          />
+          <img
+            class="banner-video-gallery show-mobile"
+            src="./public/assets/images-mobile/art section video.png"
             alt="video-banner"
           />
           <div class="text-center mt-5">
             <iframe
+              id="videoYoutube"
+              class="hide-mobile"
               width="90%"
-              height="800"
-              src="https://www.youtube.com/embed/5yjrKvSYCo8?controls=0&amp;start=4"
-              title="YouTube video player"
+              height="700"
+              src="https://www.youtube.com/embed/a3VR9UqGOLI"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            <iframe
+              id="videoYoutubeMobile"
+              class="show-mobile"
+              width="100%"
+              height="300"
+              src="https://www.youtube.com/embed/a3VR9UqGOLI"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <div class="swiper-container mt-5">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="./public/assets/images/hinh demo 1.png"
+                    data-video-id="2ZQL7UjBs2M"
+                    alt="img-1"
+                    onclick="changeVideo(this)"
+                  />
+                  <img
+                    src="./public/assets/images/hinh demo 2.png"
+                    data-video-id="5yjrKvSYCo8"
+                    alt="img-2"
+                    onclick="changeVideo(this)"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="./public/assets/images/hinh demo 1.png"
+                    data-video-id="2ZQL7UjBs2M"
+                    alt="img-1"
+                    onclick="changeVideo(this)"
+                  />
+                  <img
+                    src="./public/assets/images/hinh demo 2.png"
+                    data-video-id="5yjrKvSYCo8"
+                    alt="img-2"
+                    onclick="changeVideo(this)"
+                  />
+                </div>
+                <!-- Add more swiper-slide divs for additional items -->
+              </div>
+              <!-- Add pagination and navigation elements if needed -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
           </div>
         </div>
-        <div class="main__center__image-gallery">
+        <div id="image-block" class="main__center__image-gallery">
           <img
             class="banner-image-gallery"
             src="./public/assets/images/art section photo.png"
             alt="video-banner"
           />
-          <div class="d-flex flex-wrap justify-content-around text-center mt-5">
-            <div class="image-box">
-              <img src="./public/assets/images/hinh demo 1.png" />
+          <div class="swiper-container mt-5">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./public/assets/images/hinh demo 1.png" alt="img-1" />
+                <img src="./public/assets/images/hinh demo 2.png" alt="img-2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./public/assets/images/hinh demo 1.png" alt="img-1" />
+                <img src="./public/assets/images/hinh demo 2.png" alt="img-2" />
+              </div>
+              <!-- Add more swiper-slide divs for additional items -->
             </div>
-            <div class="image-box">
-              <img src="./public/assets/images/hinh demo 2.png" />
-            </div>
+            <!-- Add pagination and navigation elements if needed -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <a
             class="btn-see-all"
@@ -341,8 +512,76 @@
             <span>Xem tất cả <i class="fa-solid fa-arrow-right ml-2"></i></span>
           </a>
         </div>
-        <div class="main__center__emotion">
+        <div id="send-mess-block" class="main__center__emotion">
           <h1 class="title">Trạm cảm xúc</h1>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="col">
+                  <h1>from: .........</h1>
+                  <p>
+                    Gửi Cam của em, Em đã từng là một đứa lầm lì, không dám tiếp
+                    xúc nhiều với thế giới bên ngoài. Nhưng bỗng một ngày em
+                    nghe được âm nhạc của Cam, tìm hiểu về Cam, em cảm thấy mình
+                    được đồng cảm và thấu hiểu. Cam cũng từng rụt rè, nhút nhát
+                    như em, nhưng bây giờ Cam đã là một cô gái vui vẻ, hoạt
+                    ngôn, hài hước. Em cảm thấy mình được truyền nguồn năng
+                    lượng tích cực từ Cam, cảm ơn Cam vì đã luôn cố gắng hoàn
+                    thiện bản thân. Em chúc Cam sẽ luôn giữ được năng lượng tích
+                    cực ấy, và những sản phẩm âm nhạc của Cam sẽ ngày càng được
+                    nhiều người đón nhận hơn! Yêu chị.
+                  </p>
+                </div>
+                <div class="col">
+                  <h1>from: .........</h1>
+                  <p>
+                    Đã có lúc, em từng không thân thiết với bà của mình vì bà và
+                    em có cách biệt quá lớn về thế hệ. Song sau những chia sẻ từ
+                    chị, em đã tập lắng nghe, tập thấu hiểu nhiều hơn. m nhạc
+                    của chị như một người bạn bên cạnh em, giúp biết sống chậm
+                    lại, trân trọng những khoảnh khắc bên người thân. Cảm ơn chị
+                    thật nhiều, mong rằng chị sẽ tiếp tục con đường của mình,
+                    chúc chị sẽ gặt hái thật nhiều thành công. Fan của chị
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="col">
+                  <h1>from: .........</h1>
+                  <p>
+                    Gửi Cam của em, Em đã từng là một đứa lầm lì, không dám tiếp
+                    xúc nhiều với thế giới bên ngoài. Nhưng bỗng một ngày em
+                    nghe được âm nhạc của Cam, tìm hiểu về Cam, em cảm thấy mình
+                    được đồng cảm và thấu hiểu. Cam cũng từng rụt rè, nhút nhát
+                    như em, nhưng bây giờ Cam đã là một cô gái vui vẻ, hoạt
+                    ngôn, hài hước. Em cảm thấy mình được truyền nguồn năng
+                    lượng tích cực từ Cam, cảm ơn Cam vì đã luôn cố gắng hoàn
+                    thiện bản thân. Em chúc Cam sẽ luôn giữ được năng lượng tích
+                    cực ấy, và những sản phẩm âm nhạc của Cam sẽ ngày càng được
+                    nhiều người đón nhận hơn! Yêu chị.
+                  </p>
+                </div>
+                <div class="col">
+                  <h1>from: .........</h1>
+                  <p>
+                    Đã có lúc, em từng không thân thiết với bà của mình vì bà và
+                    em có cách biệt quá lớn về thế hệ. Song sau những chia sẻ từ
+                    chị, em đã tập lắng nghe, tập thấu hiểu nhiều hơn. m nhạc
+                    của chị như một người bạn bên cạnh em, giúp biết sống chậm
+                    lại, trân trọng những khoảnh khắc bên người thân. Cảm ơn chị
+                    thật nhiều, mong rằng chị sẽ tiếp tục con đường của mình,
+                    chúc chị sẽ gặt hái thật nhiều thành công. Fan của chị
+                  </p>
+                </div>
+              </div>
+              <!-- Add more swiper-slide divs for additional items -->
+            </div>
+
+            <!-- Add pagination and navigation elements if needed -->
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
           <div
             class="btn-send"
             type="button"
@@ -381,7 +620,7 @@
             </div>
           </div>
         </div>
-        <div class="main__center__countdown">
+        <div id="count-down-block" class="main__center__countdown">
           <div class="box-countdown">
             <img
               src="./public/assets/images/art section countdown.png"
@@ -521,11 +760,13 @@
           <i class="fa-solid fa-chevron-up"></i>
         </div>
         <ul class="main__right__menu">
-          <li class="nav-item active">giới thiệu</li>
-          <li class="nav-item">video</li>
-          <li class="nav-item">hình ảnh</li>
-          <li class="nav-item">gửi thư</li>
-          <li class="nav-item">countdown</li>
+          <li class="nav-item">
+            <a href="#intro-block" class="active">giới thiệu</a>
+          </li>
+          <li class="nav-item"><a href="#video-block">video</a></li>
+          <li class="nav-item"><a href="#image-block">hình ảnh</a></li>
+          <li class="nav-item"><a href="#send-mess-block">gửi thư</a></li>
+          <li class="nav-item"><a href="#count-down-block">countdown</a></li>
         </ul>
         <div class="main__right__icon">
           <i class="fa-solid fa-chevron-down"></i>
@@ -578,11 +819,11 @@
                   />
                 </div>
                 <div class="form-group">
-                  <input
+                  <textarea
                     class="form-control"
                     id="inputContent"
                     placeholder="Nội dung.."
-                  />
+                  ></textarea>
                 </div>
               </form>
 
@@ -603,6 +844,8 @@
         </div>
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
 
     <script>
       window.addEventListener("DOMContentLoaded", () => {
@@ -635,6 +878,27 @@
             };
           };
         }
+
+        // SmoothScroll({ stepSize: 100 });
+
+        document.querySelectorAll(".nav-item a").forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({
+              block: "start",
+              inline: "nearest",
+              behavior: "smooth",
+            });
+
+            // Add active class to the clicked link
+            document.querySelectorAll(".nav-item a").forEach((item) => {
+              item.classList.remove("active");
+            });
+            link.classList.add("active");
+          });
+        });
 
         // Set the date we're counting down to
         var countDownDate = new Date("Oct 13, 2023 15:37:25").getTime();
@@ -681,8 +945,8 @@
                   <div class="item">
                     <div class="time">${hours}</div>
                     <p class="text">giờ</p>
-                  </div>  
-                </div>    
+                  </div>
+                </div>
                 <div class="wrapper-item col-lg-6">
                   <div class="item">
                     <div class="time">${minutes}</div>
@@ -691,12 +955,25 @@
                   <div class="item">
                     <div class="time">${seconds}</div>
                     <p class="text">giây</p>
-                  </div>  
-                </div>    
+                  </div>
+                </div>
             </div>`;
         }, 1000);
       });
+
+      function changeVideo(videoId) {
+        const videoYoutubEle = document.querySelector("#videoYoutube");
+        const videoYoutubMobileEle = document.querySelector(
+          "#videoYoutubeMobile"
+        );
+        const embedId = videoId.getAttribute("data-video-id");
+        if (embedId && videoYoutubEle && videoYoutubMobileEle) {
+          videoYoutubEle.src = "https://www.youtube.com/embed/" + embedId;
+          videoYoutubMobileEle.src = "https://www.youtube.com/embed/" + embedId;
+        }
+      }
     </script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -713,5 +990,20 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: "auto",
+        spaceBetween: 2,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
