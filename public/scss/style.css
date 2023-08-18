@@ -61,7 +61,8 @@ body {
   height: 100%;
   list-style-type: none;
 }
-.nav-menu__block #btn-dropdown {
+.nav-menu__block #btn-dropdown,
+.nav-menu__block #btn-account {
   cursor: pointer;
 }
 .nav-menu__block-dropdown {

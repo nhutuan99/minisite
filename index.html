@@ -129,14 +129,14 @@
         <li class="nav-item"><a href="#send-mess-block">gửi thư</a></li>
         <li class="nav-item"><a href="#count-down-block">countdown</a></li>
         <li class="nav-item">đăng nhập</li>
-        <div class="btn-x-menu">
+        <div class="btn-x-menu mb-4">
           <img src="public/assets/icons/X icon.png" alt="x-icon" />
         </div>
       </ul>
       <ul id="dropdown-account" class="nav-menu__block-dropdown">
         <li class="nav-item active">đăng nhập</li>
         <div style="height: 300px"></div>
-        <div class="btn-x-account">
+        <div class="btn-x-account mb-4">
           <img src="public/assets/icons/X icon.png" alt="x-icon" />
         </div>
       </ul>
@@ -727,7 +727,8 @@
               src="public/assets/images-mobile/art countdown section.png"
               alt="countdown"
             />
-            <p id="countdown"></p>
+            <div id="countdown"></div>
+
             <div class="special-thing">
               <span>Orange có 1 điều bất ngờ dành cho bạn!</span>
             </div>
@@ -1016,7 +1017,6 @@
             const targetElement = document.querySelector(targetId);
             targetElement.scrollIntoView({
               block: "start",
-              inline: "nearest",
               behavior: "smooth",
             });
 
