@@ -248,7 +248,7 @@
             src="public/assets/images-mobile/art section photo.png"
             alt="video-banner"
           />
-          <div class="gallery">
+          <div class="gallery fade-in">
             <a
               class="h-stretch"
               data-fancybox="gallery"
@@ -298,7 +298,7 @@
             </span>
           </a>
         </div>
-        <div class="footer">
+        <div class="footer fade-in">
           <h1 class="title">Đăng ký nhận thông tin</h1>
           <form>
             <div class="form-group">
@@ -473,6 +473,27 @@
           overlay.style.display = "none";
         });
       });
+
+      // Animation Scroll
+      const mainCenter = document.querySelector(".main__center");
+      mainCenter.addEventListener("scroll", () => {
+        handleScroll();
+      });
+
+      function handleScroll() {
+        const fadeInElements = document.querySelectorAll(".fade-in");
+
+        fadeInElements?.forEach((element) => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const threshold = window.innerHeight * 0.8;
+
+          if (elementPosition < threshold) {
+            element.classList.add("animate");
+          } else {
+            element.classList.remove("animate");
+          }
+        });
+      }
     </script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

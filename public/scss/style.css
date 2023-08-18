@@ -1016,4 +1016,12 @@ body {
     min-width: 160px;
     margin-right: 1%;
   }
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.animate {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

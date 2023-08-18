@@ -167,7 +167,7 @@
       </div>
       <!-- center -->
       <div class="main__center">
-        <div id="intro-block" class="main__center__intro">
+        <section id="intro-block" class="main__center__intro">
           <img
             class="banner hide-mobile"
             src="public/assets/images/art section 1.png"
@@ -190,8 +190,8 @@
           <div class="arrow-down">
             <img src="public/assets/icons/arrow down.png" alt="arrow-down" />
           </div>
-        </div>
-        <div class="main__center__about-album">
+        </section>
+        <div class="main__center__about-album fade-in">
           <div class="row justify-content-md-center">
             <div class="col-md-6">
               <div class="left">
@@ -224,7 +224,7 @@
             </div>
           </div>
         </div>
-        <div class="main__center__timeline">
+        <div class="main__center__timeline fade-in">
           <h1 class="title">Timeline</h1>
           <div class="all-content hide-mobile">
             <div class="content">
@@ -413,7 +413,7 @@
             </div>
           </div>
         </div>
-        <div id="video-block" class="main__center__video-gallery">
+        <section id="video-block" class="main__center__video-gallery fade-in">
           <img
             class="banner-video-gallery hide-mobile"
             src="public/assets/images/art section video.png"
@@ -507,8 +507,8 @@
               <div class="swiper-button-prev"></div>
             </div>
           </div>
-        </div>
-        <div id="image-block" class="main__center__image-gallery">
+        </section>
+        <section id="image-block" class="main__center__image-gallery fade-in">
           <img
             class="banner-image-gallery hide-mobile"
             src="public/assets/images/art section photo.png"
@@ -562,8 +562,8 @@
           >
             <span>Xem tất cả <i class="fa-solid fa-arrow-right ml-2"></i></span>
           </a>
-        </div>
-        <div id="send-mess-block" class="main__center__emotion">
+        </section>
+        <section id="send-mess-block" class="main__center__emotion fade-in">
           <h1 class="title">Trạm cảm xúc</h1>
           <div class="swiper-container hide-mobile">
             <div class="swiper-wrapper">
@@ -685,8 +685,8 @@
               Gửi gì đó cho Cam <i class="fa-solid fa-arrow-right ml-2"> </i>
             </span>
           </div>
-        </div>
-        <div class="main__center__shopping">
+        </section>
+        <div class="main__center__shopping fade-in">
           <div class="row justify-content-md-center">
             <div class="col-md-6">
               <h1 class="title">Shopping</h1>
@@ -715,7 +715,7 @@
             </div>
           </div>
         </div>
-        <div id="count-down-block" class="main__center__countdown">
+        <section id="count-down-block" class="main__center__countdown fade-in">
           <div class="box-countdown">
             <img
               class="hide-mobile"
@@ -732,8 +732,8 @@
               <span>Orange có 1 điều bất ngờ dành cho bạn!</span>
             </div>
           </div>
-        </div>
-        <div class="main__center__social">
+        </section>
+        <div class="main__center__social fade-in">
           <div class="box-social">
             <h1 class="title">Download / Stream Album</h1>
             <div class="background">
@@ -845,7 +845,7 @@
             </div>
           </div>
         </div>
-        <div class="footer">
+        <div class="footer fade-in">
           <h1 class="title">section cảm ơn sponsor</h1>
           <div class="end-footer hide-mobile">
             <div class="logo">
@@ -975,7 +975,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
 
-    <script>
+    <script type="text/javascript">
       window.addEventListener("DOMContentLoaded", () => {
         const dropDownMenu = document.getElementById("dropdown-menu");
         const dropAccount = document.getElementById("dropdown-account");
@@ -1100,6 +1100,66 @@
           videoYoutubMobileEle.src = "https://www.youtube.com/embed/" + embedId;
         }
       }
+
+      // Animation Scroll
+      const mainCenter = document.querySelector(".main__center");
+
+      if (mainCenter) {
+        mainCenter.addEventListener("scroll", () => {
+          handleScroll();
+          activeMenu();
+        });
+      }
+
+      function handleScroll() {
+        const fadeInElements = document.querySelectorAll(".fade-in");
+
+        fadeInElements?.forEach((element) => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const threshold = window.innerHeight * 0.8;
+
+          if (elementPosition < threshold) {
+            element.classList.add("animate");
+          } else {
+            element.classList.remove("animate");
+          }
+        });
+      }
+      function activeMenu() {
+        var sections = document.querySelectorAll(".main__center section");
+        var scrollDistance = $(mainCenter).scrollTop();
+        for (var i = 0; i < sections.length; i++) {
+          var section = sections[i];
+          if (section.offsetTop <= scrollDistance) {
+            var navLinks = document.querySelectorAll(
+              ".main__right__menu .nav-item a"
+            );
+            var navLinksFixed = document.querySelectorAll(
+              ".nav-menu__block-dropdown .nav-item a"
+            );
+            for (var j = 0; j < navLinks.length; j++) {
+              navLinks[j].classList.remove("active");
+            }
+            for (var j = 0; j < navLinksFixed.length; j++) {
+              navLinksFixed[j].classList.remove("active");
+            }
+            var activeLink = document.querySelector(
+              '.main__right__menu .nav-item a[href="#' + section.id + '"]'
+            );
+            if (activeLink) {
+              activeLink.classList.add("active");
+            }
+            var activeLinkFixed = document.querySelector(
+              '.nav-menu__block-dropdown .nav-item a[href="#' +
+                section.id +
+                '"]'
+            );
+            if (activeLinkFixed) {
+              activeLinkFixed.classList.add("active");
+            }
+          }
+        }
+      }
     </script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -1108,14 +1168,15 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+    <!-- links to popper js and bootsrap js -->
     <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
 
