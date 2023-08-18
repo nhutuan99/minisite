@@ -129,6 +129,11 @@
       }
 
       @media screen and (max-width: 560px) {
+        .gallery {
+          grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+          grid-auto-columns: 30%;
+          grid-gap: 20px;
+        }
         .v-stretch {
           grid-row: span 1;
         }
@@ -234,8 +239,13 @@
       <div class="main__center">
         <div class="main__center__image-gallery">
           <img
-            class="banner-image-gallery"
+            class="banner-image-gallery hide-mobile"
             src="public/assets/images/art section photo.png"
+            alt="video-banner"
+          />
+          <img
+            class="banner-image-gallery show-mobile"
+            src="public/assets/images-mobile/art section photo.png"
             alt="video-banner"
           />
           <div class="gallery">
@@ -311,7 +321,7 @@
               </div>
             </div>
           </form>
-          <div class="end-footer">
+          <div class="end-footer hide-mobile">
             <div class="logo">
               <img src="public/assets/images/logo Cmazor.png" alt="logo" />
             </div>
@@ -325,6 +335,22 @@
                 alt="facebook"
               />
               <img src="public/assets/icons/instagram.png" alt="instagram" />
+            </div>
+          </div>
+          <div class="end-footer show-mobile">
+            <div class="logo">
+              <img src="public/assets/images/logo Cmazor.png" alt="logo" />
+            </div>
+            <div class="icon-social">
+              <img
+                class="mr-3"
+                src="public/assets/icons/facebook.png"
+                alt="facebook"
+              />
+              <img src="public/assets/icons/instagram.png" alt="instagram" />
+            </div>
+            <div class="copyright">
+              Copyright © 2023 CMAZOR. All rights reserved.
             </div>
           </div>
         </div>

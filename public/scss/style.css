@@ -564,7 +564,7 @@ body {
 }
 
 .show-mobile {
-  display: none;
+  display: none !important;
 }
 
 ::-webkit-scrollbar {
@@ -795,10 +795,10 @@ body {
     overflow: hidden;
   }
   .show-mobile {
-    display: block;
+    display: block !important;
   }
   .hide-mobile {
-    display: none;
+    display: none !important;
   }
   .main__center__intro,
   .main__center__about-album,
