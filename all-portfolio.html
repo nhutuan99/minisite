@@ -1,525 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- FancyBox Library -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
-    />
-    <!-- Font Poppins CDN -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Import file Style -->
-    <link href="public/scss/style.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Minisite</title>
-    <style>
-      a:hover {
-        color: #fff;
-      }
-      .btn-back {
-        width: 250px;
-        height: 50px;
-        text-align: center;
-        color: #fff;
-        background-color: #000000;
-        border: 2px solid #2a65fd;
-        border-radius: 30px;
-        margin: 0 auto;
-        margin-top: 3%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        user-select: none;
-        font-size: 18px;
-      }
-      .btn-send {
-        width: 150px;
-        height: 100%;
-        text-align: center;
-        color: #fff;
-        background-color: #000000;
-        border: 2px solid #2a65fd;
-        border-radius: 30px;
-        margin: 0 auto;
-        margin-top: 3%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        user-select: none;
-        font-size: 18px;
-      }
-      .main__center .footer {
-        margin-top: 10%;
-      }
-      .form-group #inputEmail {
-        height: 50px;
-        margin: 20px auto;
-        border-radius: 40px;
-        color: white;
-        background-color: #090909;
-        border: 1px solid #363d52;
-      }
-      .form-group {
-        position: relative;
-        width: 50%;
-        margin: 0 auto;
-        padding: 0;
-      }
-      .form-group .btn-send {
-        position: absolute;
-        bottom: 0%;
-        right: 0;
-      }
-      /* gallery styling  */
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-        grid-auto-columns: 20%;
-        grid-auto-flow: dense;
-        grid-gap: 30px;
-        width: 100%;
-        margin: 0 auto;
-        margin-top: 3%;
-      }
-      .v-stretch {
-        grid-row: span 2;
-        grid-column: span 2;
-      }
-      .h-stretch {
-        grid-row: span 1;
-        grid-column: span 2;
-      }
-      .big-stretch {
-        grid-row: span 4;
-        grid-column: span 4;
-      }
-      .gallery a img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		/>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<!-- FancyBox Library -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+		/>
+		<!-- Font Poppins CDN -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Import file Style -->
+		<link href="public/scss/style.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Minisite</title>
+		<style>
+			a:hover {
+				color: #fff;
+			}
+			.btn-back {
+				width: 250px;
+				height: 50px;
+				text-align: center;
+				color: #fff;
+				background-color: #000000;
+				border: 2px solid #2a65fd;
+				border-radius: 30px;
+				margin: 0 auto;
+				margin-top: 3%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				user-select: none;
+				font-size: 18px;
+			}
+			.btn-send {
+				width: 150px;
+				height: 100%;
+				text-align: center;
+				color: #fff;
+				background-color: #000000;
+				border: 2px solid #2a65fd;
+				border-radius: 30px;
+				margin: 0 auto;
+				margin-top: 3%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				user-select: none;
+				font-size: 18px;
+			}
+			.main__center .footer {
+				margin-top: 10%;
+			}
+			.form-group #inputEmail {
+				height: 50px;
+				margin: 20px auto;
+				border-radius: 40px;
+				color: white;
+				background-color: #090909;
+				border: 1px solid #363d52;
+			}
+			.form-group {
+				position: relative;
+				width: 50%;
+				margin: 0 auto;
+				padding: 0;
+			}
+			.form-group .btn-send {
+				position: absolute;
+				bottom: 0%;
+				right: 0;
+			}
+			/* gallery styling  */
+			.gallery {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+				grid-auto-columns: 20%;
+				grid-auto-flow: dense;
+				grid-gap: 30px;
+				width: 100%;
+				margin: 0 auto;
+				margin-top: 3%;
+			}
+			.v-stretch {
+				grid-row: span 2;
+				grid-column: span 2;
+			}
+			.h-stretch {
+				grid-row: span 1;
+				grid-column: span 2;
+			}
+			.big-stretch {
+				grid-row: span 4;
+				grid-column: span 4;
+			}
+			.gallery a img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 
-      @media screen and (max-width: 560px) {
-        .gallery {
-          grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-          grid-auto-columns: 30%;
-          grid-gap: 20px;
-        }
-        .v-stretch {
-          grid-row: span 1;
-        }
-        .h-stretch {
-          grid-row: span 1;
-        }
-        .big-stretch {
-          grid-column: span 2;
-          grid-row: span 2;
-        }
-      }
+			@media screen and (max-width: 560px) {
+				.gallery {
+					grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+					grid-auto-columns: 30%;
+					grid-gap: 20px;
+				}
+				.v-stretch {
+					grid-row: span 1;
+				}
+				.h-stretch {
+					grid-row: span 1;
+				}
+				.big-stretch {
+					grid-column: span 2;
+					grid-row: span 2;
+				}
+			}
 
-      .modal-wrapper {
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        padding: 20px;
-        border: 1px solid #222735;
-      }
-      /*  modal */
-      .modal-content {
-        padding: 20px;
-        background-color: #000;
-      }
-      .modal-title {
-        color: #fff;
-        font-weight: 300;
-        text-align: center;
-      }
-      .modal-header {
-        border-bottom: none;
-      }
-      .modal-header .modal-title {
-        font-size: 24px;
-      }
-      .modal-body {
-        background-color: #000;
-      }
-      .modal-body img {
-        max-width: 100%;
-      }
-      .modal-footer {
-        border-top: none !important;
-      }
-    </style>
-  </head>
+			.modal-wrapper {
+				width: 100%;
+				height: 100%;
+				background-color: transparent;
+				padding: 20px;
+				border: 1px solid #222735;
+			}
+			/*  modal */
+			.modal-content {
+				padding: 20px;
+				background-color: #000;
+			}
+			.modal-title {
+				color: #fff;
+				font-weight: 300;
+				text-align: center;
+			}
+			.modal-header {
+				border-bottom: none;
+			}
+			.modal-header .modal-title {
+				font-size: 24px;
+			}
+			.modal-body {
+				background-color: #000;
+			}
+			.modal-body img {
+				max-width: 100%;
+			}
+			.modal-footer {
+				border-top: none !important;
+			}
+		</style>
+	</head>
 
-  <body>
-    <!-- Header -->
-    <!-- Nav Menu -->
+	<body>
+		<!-- Header -->
+		<!-- Nav Menu -->
 
-    <section class="nav-menu fixed-top">
-      <ul id="dropdown-menu" class="nav-menu__block-dropdown">
-        <li class="nav-item">
-          <a href="index.html" class="active">giới thiệu</a>
-        </li>
-        <li class="nav-item"><a href="index.html#video-block">video</a></li>
-        <li class="nav-item">
-          <a href="index.html#image-block">hình ảnh</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html#send-mess-block">gửi thư</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html#count-down-block">countdown</a>
-        </li>
-        <li class="nav-item">đăng nhập</li>
-        <div class="btn-x-menu mb-4">
-          <img src="public/assets/icons/X icon.png" alt="x-icon" />
-        </div>
-      </ul>
-      <ul id="dropdown-account" class="nav-menu__block-dropdown">
-        <li class="nav-item active">đăng nhập</li>
-        <div style="height: 300px"></div>
-        <div class="btn-x-account mb-4">
-          <img src="public/assets/icons/X icon.png" alt="x-icon" />
-        </div>
-      </ul>
+		<section class="nav-menu fixed-top">
+			<ul id="dropdown-menu" class="nav-menu__block-dropdown">
+				<li class="nav-item">
+					<a href="index.html" class="active">giới thiệu</a>
+				</li>
+				<li class="nav-item"><a href="index.html#video-block">video</a></li>
+				<li class="nav-item">
+					<a href="index.html#image-block">hình ảnh</a>
+				</li>
+				<li class="nav-item">
+					<a href="index.html#send-mess-block">gửi thư</a>
+				</li>
+				<li class="nav-item">
+					<a href="index.html#count-down-block">countdown</a>
+				</li>
+				<li class="nav-item">đăng nhập</li>
+				<div class="btn-x-menu mb-4">
+					<img src="public/assets/icons/X icon.png" alt="x-icon" />
+				</div>
+			</ul>
+			<ul id="dropdown-account" class="nav-menu__block-dropdown">
+				<li class="nav-item active">đăng nhập</li>
+				<div style="height: 300px"></div>
+				<div class="btn-x-account mb-4">
+					<img src="public/assets/icons/X icon.png" alt="x-icon" />
+				</div>
+			</ul>
 
-      <ul class="nav-menu__block">
-        <li id="btn-dropdown" class="nav-item">
-          <img src="public/assets/icons/menu icon.png" alt="menu-icon" />
-        </li>
-        <li id="btn-logo" class="nav-item">
-          <img src="public/assets/images/logo Cmazor.png" alt="menu-icon" />
-        </li>
-        <li id="btn-account" class="nav-item">
-          <img src="public/assets/icons/login icon.png" alt="menu-icon" />
-        </li>
-      </ul>
-    </section>
+			<ul class="nav-menu__block">
+				<li id="btn-dropdown" class="nav-item">
+					<img src="public/assets/icons/menu icon.png" alt="menu-icon" />
+				</li>
+				<li id="btn-logo" class="nav-item" type="button">
+					<a onclick="window.location.href = window.location.origin">
+						<img src="public/assets/images/logo Cmazor.png" alt="menu-icon" />
+					</a>
+				</li>
+				<li id="btn-account" class="nav-item">
+					<img src="public/assets/icons/login icon.png" alt="menu-icon" />
+				</li>
+			</ul>
+		</section>
 
-    <section class="main">
-      <!-- left -->
-      <div class="main__left">
-        <div class="text">
-          ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ &nbsp w e l c o m e &nbsp t o &nbsp o r a n g e &nbsp s p
-          a c e &nbsp ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
-        </div>
-        <img src="public/assets/icons/orange icon.png" alt="orange icon" />
-      </div>
-      <!-- center -->
-      <div class="main__center">
-        <div class="main__center__image-gallery">
-          <img
-            class="banner-image-gallery hide-mobile"
-            src="public/assets/images/art section photo.png"
-            alt="video-banner"
-          />
-          <img
-            class="banner-image-gallery show-mobile"
-            src="public/assets/images-mobile/art section photo.png"
-            alt="video-banner"
-          />
-          <div class="gallery fade-in">
-            <a
-              class="h-stretch"
-              data-fancybox="gallery"
-              data-src="public/assets/images/hinh demo 1.png"
-              href="public/assets/images/hinh demo 1.png"
-            >
-              <img src="public/assets/images/hinh demo 1.png" alt="Image 1" />
-            </a>
-            <a
-              class="v-stretch"
-              data-fancybox="gallery"
-              data-src="public/assets/images/hinh demo 3.png"
-              href="public/assets/images/hinh demo 3.png"
-            >
-              <img src="public/assets/images/hinh demo 3.png" alt="Image 3" />
-            </a>
+		<section class="main">
+			<!-- left -->
+			<div class="main__left">
+				<div class="text">
+					⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ &nbsp w e l c o m e &nbsp t o &nbsp o r a n g e &nbsp s p
+					a c e &nbsp ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+				</div>
+				<img src="public/assets/icons/orange icon.png" alt="orange icon" />
+			</div>
+			<!-- center -->
+			<div class="main__center">
+				<div class="main__center__image-gallery">
+					<img
+						class="banner-image-gallery hide-mobile"
+						src="public/assets/images/art section photo.png"
+						alt="video-banner"
+					/>
+					<img
+						class="banner-image-gallery show-mobile"
+						src="public/assets/images-mobile/art section photo.png"
+						alt="video-banner"
+					/>
+					<div class="gallery fade-in">
+						<a
+							class="h-stretch"
+							data-fancybox="gallery"
+							data-src="public/assets/images/hinh demo 1.png"
+							href="public/assets/images/hinh demo 1.png"
+						>
+							<img src="public/assets/images/hinh demo 1.png" alt="Image 1" />
+						</a>
+						<a
+							class="v-stretch"
+							data-fancybox="gallery"
+							data-src="public/assets/images/hinh demo 3.png"
+							href="public/assets/images/hinh demo 3.png"
+						>
+							<img src="public/assets/images/hinh demo 3.png" alt="Image 3" />
+						</a>
 
-            <a
-              class="v-stretch"
-              data-fancybox="gallery"
-              data-src="public/assets/images/hinh demo 4.png"
-              href="public/assets/images/hinh demo 4.png"
-            >
-              <img src="public/assets/images/hinh demo 4.png" alt="Image 3" />
-            </a>
-            <a
-              class="h-stretch"
-              data-fancybox="gallery"
-              data-src="public/assets/images/hinh demo 2.png"
-              href="public/assets/images/hinh demo 2.png"
-            >
-              <img src="public/assets/images/hinh demo 2.png" alt="Image 2" />
-            </a>
-            <a
-              class="big-stretch"
-              data-fancybox="gallery"
-              data-src="public/assets/images/hinh demo 5.png"
-              href="public/assets/images/hinh demo 5.png"
-            >
-              <img src="public/assets/images/hinh demo 5.png" alt="Image 3" />
-            </a>
-            <!-- Add more images as needed -->
-          </div>
-          <a class="btn-back" href="index.html" style="text-decoration: none">
-            <span>
-              <i class="fa-solid fa-arrow-left mr-2"> </i> Trở về Trang chủ
-            </span>
-          </a>
-        </div>
-        <div class="footer fade-in">
-          <h1 class="title">Đăng ký nhận thông tin</h1>
-          <form>
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                id="inputEmail"
-                placeholder="Email của bạn"
-              />
-              <div
-                class="btn-send"
-                type="submit"
-                data-toggle="modal"
-                data-target="#ThankYouCam"
-              >
-                <span>
-                  Đăng ký
-                  <i class="fa-solid fa-arrow-right ml-2"> </i>
-                </span>
-              </div>
-            </div>
-          </form>
-          <div class="end-footer hide-mobile">
-            <div class="logo">
-              <img src="public/assets/images/logo Cmazor.png" alt="logo" />
-            </div>
-            <div class="copyright">
-              Copyright © 2023 CMAZOR. All rights reserved.
-            </div>
-            <div class="icon-social">
-              <img
-                class="mr-3"
-                src="public/assets/icons/facebook.png"
-                alt="facebook"
-              />
-              <img src="public/assets/icons/instagram.png" alt="instagram" />
-            </div>
-          </div>
-          <div class="end-footer show-mobile">
-            <div class="logo">
-              <img src="public/assets/images/logo Cmazor.png" alt="logo" />
-            </div>
-            <div class="icon-social">
-              <img
-                class="mr-3"
-                src="public/assets/icons/facebook.png"
-                alt="facebook"
-              />
-              <img src="public/assets/icons/instagram.png" alt="instagram" />
-            </div>
-            <div class="copyright">
-              Copyright © 2023 CMAZOR. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- right -->
-      <div class="main__right">
-        <div class="main__right__icon">
-          <i class="fa-solid fa-chevron-up"></i>
-        </div>
-        <ul class="main__right__menu">
-          <li class="nav-item active">giới thiệu</li>
-          <li class="nav-item">video</li>
-          <li class="nav-item">hình ảnh</li>
-          <li class="nav-item">gửi thư</li>
-          <li class="nav-item">countdown</li>
-        </ul>
-        <div class="main__right__icon">
-          <i class="fa-solid fa-chevron-down"></i>
-        </div>
-        <img src="public/assets/icons/disk icon.png" alt="disk icon" />
-      </div>
-    </section>
+						<a
+							class="v-stretch"
+							data-fancybox="gallery"
+							data-src="public/assets/images/hinh demo 4.png"
+							href="public/assets/images/hinh demo 4.png"
+						>
+							<img src="public/assets/images/hinh demo 4.png" alt="Image 3" />
+						</a>
+						<a
+							class="h-stretch"
+							data-fancybox="gallery"
+							data-src="public/assets/images/hinh demo 2.png"
+							href="public/assets/images/hinh demo 2.png"
+						>
+							<img src="public/assets/images/hinh demo 2.png" alt="Image 2" />
+						</a>
+						<a
+							class="big-stretch"
+							data-fancybox="gallery"
+							data-src="public/assets/images/hinh demo 5.png"
+							href="public/assets/images/hinh demo 5.png"
+						>
+							<img src="public/assets/images/hinh demo 5.png" alt="Image 3" />
+						</a>
+						<!-- Add more images as needed -->
+					</div>
+					<a class="btn-back" href="index.html" style="text-decoration: none">
+						<span>
+							<i class="fa-solid fa-arrow-left mr-2"> </i> Trở về Trang chủ
+						</span>
+					</a>
+				</div>
+				<div class="footer fade-in">
+					<h1 class="title">Đăng ký nhận thông tin</h1>
+					<form>
+						<div class="form-group">
+							<input
+								type="text"
+								class="form-control"
+								id="inputEmail"
+								placeholder="Email của bạn"
+							/>
+							<div
+								class="btn-send"
+								type="submit"
+								data-toggle="modal"
+								data-target="#ThankYouCam"
+							>
+								<span>
+									Đăng ký
+									<i class="fa-solid fa-arrow-right ml-2"> </i>
+								</span>
+							</div>
+						</div>
+					</form>
+					<div class="end-footer hide-mobile">
+						<div class="logo">
+							<img src="public/assets/images/logo Cmazor.png" alt="logo" />
+						</div>
+						<div class="copyright">
+							Copyright © 2023 CMAZOR. All rights reserved.
+						</div>
+						<div class="icon-social">
+							<img
+								class="mr-3"
+								src="public/assets/icons/facebook.png"
+								alt="facebook"
+							/>
+							<img src="public/assets/icons/instagram.png" alt="instagram" />
+						</div>
+					</div>
+					<div class="end-footer show-mobile">
+						<div class="logo">
+							<img src="public/assets/images/logo Cmazor.png" alt="logo" />
+						</div>
+						<div class="icon-social">
+							<img
+								class="mr-3"
+								src="public/assets/icons/facebook.png"
+								alt="facebook"
+							/>
+							<img src="public/assets/icons/instagram.png" alt="instagram" />
+						</div>
+						<div class="copyright">
+							Copyright © 2023 CMAZOR. All rights reserved.
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- right -->
+			<div class="main__right">
+				<div class="main__right__icon">
+					<i class="fa-solid fa-chevron-up"></i>
+				</div>
+				<ul class="main__right__menu">
+					<li class="nav-item">
+						<a href="index.html">giới thiệu</a>
+					</li>
+					<li class="nav-item"><a href="index.html#video-block">video</a></li>
+					<li class="nav-item">
+						<a href="index.html#image-block">hình ảnh</a>
+					</li>
+					<li class="nav-item">
+						<a href="index.html#send-mess-block">gửi thư</a>
+					</li>
+					<li class="nav-item">
+						<a href="index.html#count-down-block">countdown</a>
+					</li>
+				</ul>
+				<div class="main__right__icon">
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<img src="public/assets/icons/disk icon.png" alt="disk icon" />
+			</div>
+		</section>
 
-    <div
-      class="modal fade"
-      id="ThankYouCam"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="thank-you"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-wrapper">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="thank-you">Cảm ơn bạn đã đăng ký</h5>
-              <div
-                type="button"
-                class="btn-x-menu"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <img src="public/assets/icons/X icon.png" alt="x-icon" />
-              </div>
-            </div>
-            <div class="modal-body">
-              <img src="public/assets/images/thank-you.png" alt="thank-you" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+		<div
+			class="modal fade"
+			id="ThankYouCam"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="thank-you"
+		>
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+				<div class="modal-wrapper">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="thank-you">Cảm ơn bạn đã đăng ký</h5>
+							<div
+								type="button"
+								class="btn-x-menu"
+								data-dismiss="modal"
+								aria-label="Close"
+							>
+								<img src="public/assets/icons/X icon.png" alt="x-icon" />
+							</div>
+						</div>
+						<div class="modal-body">
+							<img src="public/assets/images/thank-you.png" alt="thank-you" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
 
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        const dropDownMenu = document.getElementById("dropdown-menu");
-        const dropAccount = document.getElementById("dropdown-account");
+		<script>
+			window.addEventListener('DOMContentLoaded', () => {
+				const dropDownMenu = document.getElementById('dropdown-menu');
+				const dropAccount = document.getElementById('dropdown-account');
 
-        const btnXMenu = document.querySelector(".btn-x-menu");
-        const btnXAccount = document.querySelector(".btn-x-account");
-        const btnDropdown = document.getElementById("btn-dropdown");
-        const btnAccount = document.getElementById("btn-account");
+				const btnXMenu = document.querySelector('.btn-x-menu');
+				const btnXAccount = document.querySelector('.btn-x-account');
+				const btnDropdown = document.getElementById('btn-dropdown');
+				const btnAccount = document.getElementById('btn-account');
 
-        if (btnDropdown && dropDownMenu && btnXMenu) {
-          btnDropdown.onclick = () => {
-            dropDownMenu.style.display = "block";
-            btnXMenu.style.display = "block";
-            btnXMenu.onclick = () => {
-              dropDownMenu.style.display = "none";
-              btnXMenu.style.display = "none";
-            };
-          };
-        }
+				const main = document.querySelector('.main');
 
-        if (btnAccount && dropAccount && btnXAccount) {
-          btnAccount.onclick = () => {
-            dropAccount.style.display = "block";
-            btnXAccount.style.display = "block";
-            btnXAccount.onclick = () => {
-              dropAccount.style.display = "none";
-              btnXAccount.style.display = "none";
-            };
-          };
-        }
+				if (btnDropdown && dropDownMenu && btnXMenu) {
+					btnDropdown.onclick = () => {
+						dropDownMenu.style.display = 'block';
+						btnXMenu.style.display = 'block';
+						main.style.visibility = 'hidden';
+						btnXMenu.onclick = () => {
+							dropDownMenu.style.display = 'none';
+							btnXMenu.style.display = 'none';
+							main.style.visibility = 'visible';
+						};
+					};
+				}
 
-        document.querySelectorAll(".nav-item a").forEach((link) => {
-          link.addEventListener("click", (event) => {
-            event.preventDefault();
-            const targetId = link.getAttribute("href");
-            const targetElement = document.querySelector(targetId);
-            targetElement.scrollIntoView({
-              block: "start",
-              inline: "nearest",
-              behavior: "smooth",
-            });
+				if (btnAccount && dropAccount && btnXAccount) {
+					btnAccount.onclick = () => {
+						dropAccount.style.display = 'block';
+						btnXAccount.style.display = 'block';
+						main.style.visibility = 'hidden';
+						btnXAccount.onclick = () => {
+							dropAccount.style.display = 'none';
+							btnXAccount.style.display = 'none';
+							main.style.visibility = 'visible';
+						};
+					};
+				}
 
-            // Add active class to the clicked link
-            document.querySelectorAll(".nav-item a").forEach((item) => {
-              item.classList.remove("active");
-            });
-            link.classList.add("active");
-          });
-        });
+				const gridItems = document.querySelectorAll('.grid-item');
+				const overlay = document.querySelector('.overlay');
+				const zoomedImg = document.querySelector('.zoomed-img');
+				const closeBtn = document.querySelector('.close');
 
-        const gridItems = document.querySelectorAll(".grid-item");
-        const overlay = document.querySelector(".overlay");
-        const zoomedImg = document.querySelector(".zoomed-img");
-        const closeBtn = document.querySelector(".close");
+				gridItems.forEach(function (item) {
+					item.addEventListener('click', function () {
+						const imgSrc = this.querySelector('img').src;
+						zoomedImg.src = imgSrc;
+						overlay.style.display = 'flex';
+					});
+				});
 
-        gridItems.forEach(function (item) {
-          item.addEventListener("click", function () {
-            const imgSrc = this.querySelector("img").src;
-            zoomedImg.src = imgSrc;
-            overlay.style.display = "flex";
-          });
-        });
+				closeBtn.addEventListener('click', function () {
+					overlay.style.display = 'none';
+				});
+			});
 
-        closeBtn.addEventListener("click", function () {
-          overlay.style.display = "none";
-        });
-      });
+			// Animation Scroll
+			const mainCenter = document.querySelector('.main__center');
+			mainCenter.addEventListener('scroll', () => {
+				handleScroll();
+			});
 
-      // Animation Scroll
-      const mainCenter = document.querySelector(".main__center");
-      mainCenter.addEventListener("scroll", () => {
-        handleScroll();
-      });
+			function handleScroll() {
+				const fadeInElements = document.querySelectorAll('.fade-in');
 
-      function handleScroll() {
-        const fadeInElements = document.querySelectorAll(".fade-in");
+				fadeInElements?.forEach((element) => {
+					const elementPosition = element.getBoundingClientRect().top;
+					const threshold = window.innerHeight * 0.8;
 
-        fadeInElements?.forEach((element) => {
-          const elementPosition = element.getBoundingClientRect().top;
-          const threshold = window.innerHeight * 0.8;
+					if (elementPosition < threshold) {
+						element.classList.add('animate');
+					} else {
+						element.classList.remove('animate');
+					}
+				});
+			}
+		</script>
 
-          if (elementPosition < threshold) {
-            element.classList.add("animate");
-          } else {
-            element.classList.remove("animate");
-          }
-        });
-      }
-    </script>
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-      Fancybox.bind('[data-fancybox="gallery"]', {
-        Thumbs: {
-          showOnStart: false,
-        },
-      });
-    </script>
-  </body>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+		<script>
+			Fancybox.bind('[data-fancybox="gallery"]', {
+				Thumbs: {
+					showOnStart: false
+				}
+			});
+		</script>
+	</body>
 </html>
