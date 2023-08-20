@@ -6,6 +6,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
+		<meta http-equiv="Cache-Control" content="public, max-age=3600" />
 		<!-- Bootstrap CSS -->
 		<link
 			rel="stylesheet"
@@ -24,11 +25,6 @@
 			rel="stylesheet"
 			href="https://unpkg.com/swiper/swiper-bundle.min.css"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-		/>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 		<!-- Font Poppins CDN -->
 		<link
@@ -175,8 +171,8 @@
 			<!-- left -->
 			<div class="main__left">
 				<div class="text">
-					⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ &nbsp w e l c o m e &nbsp t o &nbsp o r a n g e &nbsp s
-					p a c e &nbsp ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+					⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ &nbsp w e l c o m e &nbsp t o &nbsp o r a n g e &nbsp s p
+					a c e &nbsp ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
 				</div>
 				<img src="public/assets/icons/orange icon.png" alt="orange icon" />
 			</div>
@@ -332,7 +328,9 @@
 							<div style="width: 320px"></div>
 						</div>
 
-						<div class="final-content">Stage Performance</div>
+						<div class="final-content" style="font-size: 18px">
+							Stage Performance
+						</div>
 					</div>
 					<div class="all-content show-mobile">
 						<div class="content" data-date="2023-08-31T23:59:00">
@@ -421,6 +419,7 @@
 									border: 1px solid #2a65fd;
 									text-align: center;
 									color: #2a65fd;
+									font-size: 20px;
 								"
 							>
 								Stage Performance
@@ -440,26 +439,17 @@
 						alt="video-banner"
 					/>
 					<div class="text-center mt-5">
-						<iframe
-							id="videoYoutube"
-							class="hide-mobile"
-							width="90%"
-							height="700"
-							src="https://www.youtube.com/embed/a3VR9UqGOLI"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-						<iframe
-							id="videoYoutubeMobile"
-							class="show-mobile"
-							width="100%"
-							height="300"
-							src="https://www.youtube.com/embed/a3VR9UqGOLI"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
+						<div class="video-container">
+							<iframe
+								id="videoYoutube"
+								width="560"
+								height="315"
+								src="https://www.youtube.com/embed/a3VR9UqGOLI"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
 
 						<div class="swiper-container mt-5">
 							<div class="swiper-wrapper">
@@ -482,7 +472,7 @@
 						src="public/assets/images-mobile/art section photo.png"
 						alt="video-banner"
 					/>
-					<div class="swiper-container mt-5 hide-mobile">
+					<div class="swiper-container mt-5">
 						<div class="swiper-wrapper">
 							<!-- Add more swiper-slide divs for additional items -->
 						</div>
@@ -1008,7 +998,7 @@
 					},
 					{
 						id: 1,
-						url: 'public/assets/images/hinh demo 2.png'
+						url: 'public/assets/images/hinh demo 3.png'
 					},
 					{
 						id: 2,
@@ -1099,12 +1089,8 @@
 
 			function changeVideo(videoId) {
 				const videoYoutubEle = document.querySelector('#videoYoutube');
-				const videoYoutubMobileEle = document.querySelector(
-					'#videoYoutubeMobile'
-				);
-				if (videoId && videoYoutubEle && videoYoutubMobileEle) {
+				if (videoId && videoYoutubEle) {
 					videoYoutubEle.src = 'https://www.youtube.com/embed/' + videoId;
-					videoYoutubMobileEle.src = 'https://www.youtube.com/embed/' + videoId;
 				}
 			}
 
@@ -1190,10 +1176,6 @@
 		<script>
 			var swiper = new Swiper('.swiper-container', {
 				slidesPerView: 2,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true
-				},
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev'

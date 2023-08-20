@@ -50,6 +50,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../assets/images/BG_1920x1080.jpg");
+  background-color: #0b0b0b;
 }
 
 .nav-menu {
@@ -818,7 +819,32 @@ body {
 
 .swiper-slide img {
   max-width: 100%;
-  overflow: hidden;
+  height: 234px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 92%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .main__center__emotion .swiper-slide .col {
@@ -983,6 +1009,14 @@ body {
   .hide-tablet {
     display: none;
   }
+  .swiper-slide {
+    padding: 0 10%;
+  }
+  .swiper-slide img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-height: 234px;
+  }
   .main__center__timeline .all-content .content {
     height: 120px;
     -webkit-box-pack: center;
@@ -1050,6 +1084,9 @@ body {
   }
   .hide-mobile {
     display: none !important;
+  }
+  .video-container iframe {
+    width: 100%;
   }
   .main__center__intro,
   .main__center__about-album,

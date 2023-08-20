@@ -459,21 +459,21 @@
 				const closeBtn = document.querySelector('.close');
 
 				gridItems.forEach(function (item) {
-					item.addEventListener('click', function () {
+					item?.addEventListener('click', function () {
 						const imgSrc = this.querySelector('img').src;
 						zoomedImg.src = imgSrc;
 						overlay.style.display = 'flex';
 					});
 				});
 
-				closeBtn.addEventListener('click', function () {
+				closeBtn?.addEventListener('click', function () {
 					overlay.style.display = 'none';
 				});
 			});
 
 			// Animation Scroll
 			const mainCenter = document.querySelector('.main__center');
-			mainCenter.addEventListener('scroll', () => {
+			mainCenter?.addEventListener('scroll', () => {
 				handleScroll();
 			});
 
