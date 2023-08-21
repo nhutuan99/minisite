@@ -1090,7 +1090,9 @@
       function changeVideo(videoId) {
         const videoYoutubEle = document.querySelector("#videoYoutube");
         if (videoId && videoYoutubEle) {
-          videoYoutubEle.src = "https://www.youtube.com/embed/" + videoId;
+          videoYoutubEle.src =
+            "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+          videoYoutubEle.setAttribute("allow", "autoplay");
         }
       }
 
