@@ -979,7 +979,7 @@ body {
     font-size: 14px;
   }
   .main__center__emotion .swiper-slide .col {
-    width: 70%;
+    width: 90%;
   }
   .main__center__emotion .swiper-slide .col p {
     -webkit-line-clamp: 13;
@@ -998,9 +998,6 @@ body {
   }
   .main__center__countdown .box-countdown .special-thing {
     top: 93%;
-  }
-  .main__center__countdown .box-countdown .special-thing span {
-    font-size: 14px;
   }
   .main__center__social .box-social {
     padding: 16px 1%;
