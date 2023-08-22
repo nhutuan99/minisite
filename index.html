@@ -33,6 +33,7 @@
     />
     <!-- Import file Style -->
     <link href="public/scss/style.css" rel="stylesheet" />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -40,6 +41,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+
     <title>Minisite</title>
     <style>
       html {
@@ -180,7 +187,7 @@
       <div class="main__center">
         <section id="intro-block" class="main__center__intro">
           <img
-            class="banner hide-mobile"
+            class="banner hide-mobile animate__animated animate__fadeInUpBig"
             src="public/assets/images/art section 1.png"
             alt="banner"
           />
@@ -189,8 +196,8 @@
             src="public/assets/images-mobile/art section 1.png"
             alt="banner"
           />
-          <h1 class="title">Chào mừng bạn</h1>
-          <p class="description">
+          <h1 class="title animate__left">Chào mừng bạn</h1>
+          <p class="description animate__right">
             đến kho cảm xúc của Orange! Có lẽ mỗi chúng ta, ai cũng mang trong
             mình những tổn thương riêng, và tất nhiên Orange cũng vậy. Khi bạn
             ghé thăm kho cảm xúc này, Orange mong bạn cũng có thể viết ra những
@@ -204,7 +211,7 @@
         </section>
         <div class="main__center__about-album fade-in">
           <div class="row justify-content-md-center">
-            <div class="col-md-6">
+            <div class="col-md-6 animate__left">
               <div class="left">
                 <h1 class="title">Về album <br />"Nhưng"</h1>
                 <p class="description">
@@ -225,7 +232,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 animate__right">
               <div class="right">
                 <img
                   src="public/assets/images/hình cover section 2.png"
@@ -235,7 +242,7 @@
             </div>
           </div>
         </div>
-        <div class="main__center__timeline fade-in">
+        <div class="main__center__timeline fade-in animate__center">
           <h1 class="title">Timeline</h1>
           <div class="all-content hide-mobile">
             <div class="content" data-date="2023-08-31T23:59:00">
@@ -327,12 +334,11 @@
               </div>
               <div style="width: 320px"></div>
             </div>
-
             <div class="final-content" style="font-size: 18px">
               Stage Performance
             </div>
           </div>
-          <div class="all-content show-mobile">
+          <div class="all-content show-mobile fade-in animate__center">
             <div class="content" data-date="2023-08-31T23:59:00">
               <div class="time">
                 <div class="time-box">
@@ -429,12 +435,12 @@
         </div>
         <section id="video-block" class="main__center__video-gallery fade-in">
           <img
-            class="banner-video-gallery hide-mobile"
+            class="banner-video-gallery hide-mobile animate__center"
             src="public/assets/images/art section video.png"
             alt="video-banner"
           />
           <img
-            class="banner-video-gallery show-mobile"
+            class="banner-video-gallery show-mobile animate__center"
             src="public/assets/images-mobile/art section video.png"
             alt="video-banner"
           />
@@ -463,12 +469,12 @@
         </section>
         <section id="image-block" class="main__center__image-gallery fade-in">
           <img
-            class="banner-image-gallery hide-mobile"
+            class="banner-image-gallery hide-mobile animate__center"
             src="public/assets/images/art section photo.png"
             alt="video-banner"
           />
           <img
-            class="banner-image-gallery show-mobile"
+            class="banner-image-gallery show-mobile animate__center"
             src="public/assets/images-mobile/art section photo.png"
             alt="video-banner"
           />
@@ -1063,27 +1069,27 @@
 
           // Display the result in the element with id="countdown"
           document.getElementById("countdown").innerHTML = `<div class="row">
-			             <div class="wrapper-item col-lg-6">
-			               <div class="item">
-			                 <div class="time">${days}</div>
-			                 <p class="text">ngày</p>
-			               </div>
-			               <div class="item">
-			                 <div class="time">${hours}</div>
-			                 <p class="text">giờ</p>
-			               </div>
-			             </div>
-			             <div class="wrapper-item col-lg-6">
-			               <div class="item">
-			                 <div class="time">${minutes}</div>
-			                 <p class="text">phút</p>
-			               </div>
-			               <div class="item">
-			                 <div class="time">${seconds}</div>
-			                 <p class="text">giây</p>
-			               </div>
-			             </div>
-			         </div>`;
+                <div class="wrapper-item col-lg-6">
+                  <div class="item">
+                    <div class="time">${days}</div>
+                    <p class="text">ngày</p>
+                  </div>
+                  <div class="item">
+                    <div class="time">${hours}</div>
+                    <p class="text">giờ</p>
+                  </div>
+                </div>
+                <div class="wrapper-item col-lg-6">
+                  <div class="item">
+                    <div class="time">${minutes}</div>
+                    <p class="text">phút</p>
+                  </div>
+                  <div class="item">
+                    <div class="time">${seconds}</div>
+                    <p class="text">giây</p>
+                  </div>
+                </div>
+            </div>`;
         }, 1000);
       });
 
@@ -1113,8 +1119,27 @@
           const elementPosition = element.getBoundingClientRect().top;
           const threshold = window.innerHeight * 0.8;
 
+          let animateCenterEle = document.querySelectorAll(".animate__center");
+          let animateLeftEle = document.querySelectorAll(".animate__left");
+          let animateRightEle = document.querySelectorAll(".animate__right");
+
           if (elementPosition < threshold) {
             element.classList.add("animate");
+            animateCenterEle?.forEach((item) => {
+              item.classList.add("animate__animated", "animate__fadeInUpBig");
+              item.style.opacity = 1;
+              item.style.visibility = "visible";
+            });
+            animateLeftEle?.forEach((item) => {
+              item.classList.add("animate__animated", "animate__fadeInLeft");
+              item.style.opacity = 1;
+              item.style.visibility = "visible";
+            });
+            animateRightEle?.forEach((item) => {
+              item.classList.add("animate__animated", "animate__fadeInRight");
+              item.style.opacity = 1;
+              item.style.visibility = "visible";
+            });
           } else {
             element.classList.remove("animate");
           }

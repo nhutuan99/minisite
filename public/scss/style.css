@@ -674,6 +674,24 @@ body {
   cursor: pointer;
 }
 
+.animate__center {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.animate__left {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.animate__right {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
 @media screen and (max-width: 1650px) {
   .main__center__social .box-social .background .text {
     top: 28%;
@@ -797,7 +815,7 @@ body {
     justify-content: center;
   }
   .main__center__timeline .all-content .content .time {
-    margin-right: 3%;
+    margin: 0 auto;
   }
   .main__center__timeline .all-content .content .time .line {
     height: 31px;

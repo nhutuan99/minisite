@@ -693,6 +693,24 @@ body {
   }
 }
 
+.animate__center {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.animate__left {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+.animate__right {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
 // Tablet Responsive
 
 @media screen and (max-width: 1650px) {
@@ -858,7 +876,7 @@ body {
         height: 120px;
         justify-content: center;
         .time {
-          margin-right: 3%;
+          margin: 0 auto;
           .line {
             height: 31px;
           }
