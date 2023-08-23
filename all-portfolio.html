@@ -38,6 +38,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
     <title>Minisite</title>
     <style>
       a:hover {
@@ -253,18 +258,18 @@
       <div class="main__center">
         <div class="main__center__image-gallery">
           <img
-            class="banner-image-gallery hide-mobile"
+            class="banner-image-gallery hide-mobile animate__animated animate__fadeInUpBig"
             src="public/assets/images/art section photo.png"
             alt="video-banner"
           />
           <img
-            class="banner-image-gallery show-mobile"
+            class="banner-image-gallery show-mobile animate__animated animate__fadeInUpBig"
             src="public/assets/images-mobile/art section photo.png"
             alt="video-banner"
           />
           <div class="gallery fade-in">
             <a
-              class="h-stretch"
+              class="h-stretch animate__left"
               data-fancybox="gallery"
               data-src="public/assets/images/hinh demo 1.png"
               href="public/assets/images/hinh demo 1.png"
@@ -272,7 +277,7 @@
               <img src="public/assets/images/hinh demo 1.png" alt="Image 1" />
             </a>
             <a
-              class="v-stretch"
+              class="v-stretch animate__right"
               data-fancybox="gallery"
               data-src="public/assets/images/hinh demo 3.png"
               href="public/assets/images/hinh demo 3.png"
@@ -281,7 +286,7 @@
             </a>
 
             <a
-              class="v-stretch"
+              class="v-stretch animate__left"
               data-fancybox="gallery"
               data-src="public/assets/images/hinh demo 4.png"
               href="public/assets/images/hinh demo 4.png"
@@ -289,7 +294,7 @@
               <img src="public/assets/images/hinh demo 4.png" alt="Image 3" />
             </a>
             <a
-              class="h-stretch"
+              class="h-stretch animate__right"
               data-fancybox="gallery"
               data-src="public/assets/images/hinh demo 2.png"
               href="public/assets/images/hinh demo 2.png"
@@ -297,7 +302,7 @@
               <img src="public/assets/images/hinh demo 2.png" alt="Image 2" />
             </a>
             <a
-              class="big-stretch"
+              class="big-stretch animate__center"
               data-fancybox="gallery"
               data-src="public/assets/images/hinh demo 5.png"
               href="public/assets/images/hinh demo 5.png"
@@ -315,7 +320,7 @@
         <div class="footer fade-in">
           <h1 class="title">Đăng ký nhận thông tin</h1>
           <form>
-            <div class="form-group">
+            <div class="form-group animate__center">
               <input
                 type="text"
                 class="form-control"
@@ -323,7 +328,7 @@
                 placeholder="Email của bạn"
               />
               <div
-                class="btn-send"
+                class="btn-send animate__center"
                 type="submit"
                 data-toggle="modal"
                 data-target="#ThankYouCam"
@@ -492,15 +497,50 @@
       function handleScroll() {
         const fadeInElements = document.querySelectorAll(".fade-in");
 
-        fadeInElements?.forEach((element) => {
-          const elementPosition = element.getBoundingClientRect().top;
-          const threshold = window.innerHeight * 0.8;
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.2, // Adjust this value as needed
+        };
 
-          if (elementPosition < threshold) {
-            element.classList.add("animate");
-          } else {
-            element.classList.remove("animate");
-          }
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const fadeInElement = entry.target;
+              fadeInElement.classList.add("animate");
+
+              const animateCenterEle =
+                fadeInElement.querySelectorAll(".animate__center");
+              const animateLeftEle =
+                fadeInElement.querySelectorAll(".animate__left");
+              const animateRightEle =
+                fadeInElement.querySelectorAll(".animate__right");
+
+              animateCenterEle?.forEach((item) => {
+                item.classList.add("animate__animated", "animate__fadeInUpBig");
+                item.style.opacity = 1;
+                item.style.visibility = "visible";
+              });
+
+              animateLeftEle?.forEach((item) => {
+                item.classList.add("animate__animated", "animate__fadeInLeft");
+                item.style.opacity = 1;
+                item.style.visibility = "visible";
+              });
+
+              animateRightEle?.forEach((item) => {
+                item.classList.add("animate__animated", "animate__fadeInRight");
+                item.style.opacity = 1;
+                item.style.visibility = "visible";
+              });
+
+              // observer.unobserve(fadeInElement); // Stop observing the element once it comes into view
+            }
+          });
+        }, observerOptions);
+
+        fadeInElements.forEach((element) => {
+          observer.observe(element);
         });
       }
     </script>
