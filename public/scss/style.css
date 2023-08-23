@@ -248,6 +248,7 @@ body {
   width: 100%;
   border: 1px solid #2f3547;
   padding: 3px 10px;
+  color: #2a65fd;
 }
 .main__center__timeline .all-content .content .time .line {
   display: block;
@@ -257,7 +258,7 @@ body {
   transform: translate(30px, 0px);
 }
 .main__center__timeline .all-content .content .text-color {
-  color: #2a65fd !important;
+  color: #2a65fd;
 }
 .main__center__timeline .all-content .final-content {
   margin-top: 5%;

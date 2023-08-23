@@ -250,7 +250,7 @@
                 <span>Ep1 series Cam’On</span>
               </div>
               <div class="time">
-                <div class="time-box text-color">
+                <div class="time-box">
                   <div class="">31.08</div>
                 </div>
                 <div class="line"></div>
@@ -261,7 +261,7 @@
               <div style="width: 320px"></div>
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-center text-color">
+                  <div class="time-text text-center">
                     04.09
                     <br />
                     08.09
@@ -279,7 +279,7 @@
               </div>
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color">14.09</div>
+                  <div class="time-text">14.09</div>
                 </div>
                 <div class="line"></div>
               </div>
@@ -289,7 +289,7 @@
               <div style="width: 320px"></div>
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color">21.09</div>
+                  <div class="time-text">21.09</div>
                 </div>
                 <div class="line"></div>
               </div>
@@ -303,7 +303,7 @@
               </div>
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color">28.09</div>
+                  <div class="time-text">28.09</div>
                 </div>
                 <div class="line"></div>
               </div>
@@ -313,7 +313,7 @@
               <div style="width: 320px"></div>
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color">05.10</div>
+                  <div class="time-text">05.10</div>
                 </div>
                 <div class="line"></div>
               </div>
@@ -325,7 +325,7 @@
               <div style="width: 320px"></div>
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color text-center">
+                  <div class="time-text text-center">
                     09.10
                     <br />
                     13.10
@@ -342,7 +342,7 @@
             <div class="content" data-date="2023-08-31T23:59:00">
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color">31.08</div>
+                  <div class="time-text">31.08</div>
                 </div>
                 <div class="line"></div>
               </div>
@@ -353,7 +353,7 @@
             <div class="content" data-date="2023-09-08T23:59:00">
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-center text-color">
+                  <div class="time-text text-center">
                     04.09
                     <br />
                     08.09
@@ -368,7 +368,7 @@
             <div class="content" data-date="2023-09-14T23:59:00">
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color">14.09</div>
+                  <div class="time-text">14.09</div>
                 </div>
                 <div class="line"></div>
               </div>
@@ -379,7 +379,7 @@
             <div class="content" data-date="2023-09-21T23:59:00">
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color">21.09</div>
+                  <div class="time-text">21.09</div>
                 </div>
                 <div class="line"></div>
               </div>
@@ -390,7 +390,7 @@
             <div class="content" data-date="2023-09-28T23:59:00">
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color">28.09</div>
+                  <div class="time-text">28.09</div>
                 </div>
                 <div class="line"></div>
               </div>
@@ -401,7 +401,7 @@
             <div class="content" data-date="2023-10-05T23:59:00">
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color">05.10</div>
+                  <div class="time-text">05.10</div>
                 </div>
                 <div class="line"></div>
               </div>
@@ -412,7 +412,7 @@
             <div class="content" data-date="2023-10-13T23:59:00">
               <div class="time">
                 <div class="time-box">
-                  <div class="time-text text-color text-center">
+                  <div class="time-text text-center">
                     09.10
                     <br />
                     13.10
@@ -946,6 +946,10 @@
             if (itemDate < currentDate) {
               for (let j = 0; j < item.children.length; j++) {
                 item.children[j].style.color = "#2b3040";
+                const timeText = item.children[j].querySelector('.time .time-box')
+                if (timeText) {
+                  timeText.style.color = "#2b3040";
+                }
               }
             }
           }
