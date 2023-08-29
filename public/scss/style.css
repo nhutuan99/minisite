@@ -195,12 +195,15 @@ body {
   margin-bottom: 3%;
   overflow: hidden;
 }
-.main__center__about-album .left h1.title {
+.main__center__about-album .left .title {
   font-family: "Ribes-Black";
   font-size: 62px;
   font-weight: 400;
   color: #f16522;
   margin-bottom: 24px;
+}
+.main__center__about-album .left .title img {
+  max-width: 100%;
 }
 .main__center__about-album .left p.description {
   padding-left: 10%;
@@ -209,9 +212,13 @@ body {
   color: #fff;
 }
 .main__center__about-album .right {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  height: 100%;
 }
 .main__center__about-album .right img {
+  margin: auto;
   width: 366px;
 }
 .main__center__timeline {
@@ -245,20 +252,18 @@ body {
   padding: 10px 50px;
 }
 .main__center__timeline .all-content .content .time .time-box {
-  width: 100%;
+  width: 84px;
   border: 1px solid #2f3547;
   padding: 3px 10px;
   color: #2a65fd;
+  text-align: center;
 }
 .main__center__timeline .all-content .content .time .line {
   display: block;
   height: 61px;
   width: 2px;
   background-color: #2f3547;
-  transform: translate(30px, 0px);
-}
-.main__center__timeline .all-content .content .text-color {
-  color: #2a65fd;
+  transform: translate(42px, 0px);
 }
 .main__center__timeline .all-content .final-content {
   margin-top: 5%;
@@ -811,9 +816,6 @@ body {
   .main__center__timeline .all-content .content {
     height: 120px;
     justify-content: center;
-  }
-  .main__center__timeline .all-content .content .time {
-    margin: 0 auto;
   }
   .main__center__timeline .all-content .content .time .line {
     height: 31px;
