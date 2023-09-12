@@ -212,6 +212,7 @@ body {
 					color: #f16522;
 					margin-bottom: 24px;
 					img {
+						padding-left: 10%;
 						max-width: 100%;
 					}
 				}
@@ -633,7 +634,7 @@ body {
 
 .swiper-slide {
 	img {
-		max-width: 100%;
+		width: 435px;
 		height: 234px;
 	}
 }
@@ -778,10 +779,13 @@ body {
 
 	.main__center__about-album {
 		.left {
-			h1.title {
+			.title {
 				margin-left: 15px;
 				text-align: left;
 				font-size: 56px;
+				img {
+					padding: 0 15px;
+				}
 			}
 			p.description {
 				padding: 0 15px;
@@ -871,10 +875,6 @@ body {
 	}
 	.swiper-slide {
 		padding: 0 10%;
-		img {
-			object-fit: contain;
-			max-height: 234px;
-		}
 	}
 	.main__center__timeline {
 		.all-content {
@@ -963,6 +963,13 @@ body {
 
 	.video-container iframe {
 		width: 100%;
+	}
+	
+	.swiper-slide {
+		img {
+			width: 290px;
+			height: 170px;
+		}
 	}
 
 	.main__center__intro,
@@ -1166,7 +1173,7 @@ body {
 // Animation
 .fade-in {
 	opacity: 0;
-	transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.1s ease-in-out;
 }
 
 .animate {
