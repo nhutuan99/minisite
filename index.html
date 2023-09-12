@@ -988,6 +988,8 @@
 					for (let i = 0; i < listVideos.length; i++) {
 						let itemSlide = document.createElement('div');
 						itemSlide.classList.add('swiper-slide');
+						let containerImg =  document.createElement('div'); 
+						containerImg.classList.add('container-img')
 						let imgItem = document.createElement('img');
 						imgItem.setAttribute('src', listVideos[i].url);
 						imgItem.setAttribute('data-video-id', listVideos[i].dataVideoId);
@@ -995,7 +997,8 @@
 						imgItem.onclick = () => {
 							changeVideo(listVideos[i].dataVideoId);
 						};
-						itemSlide.appendChild(imgItem);
+						itemSlide.appendChild(containerImg);
+						containerImg.appendChild(imgItem)
 						videoBlockEle.appendChild(itemSlide);
 					}
 				}
@@ -1028,10 +1031,13 @@
 					for (let i = 0; i < listImages.length; i++) {
 						let itemSlide = document.createElement('div');
 						itemSlide.classList.add('swiper-slide');
+						let containerImg =  document.createElement('div'); 
+						containerImg.classList.add('container-img')
 						let imgItem = document.createElement('img');
 						imgItem.setAttribute('src', listImages[i].url);
 						imgItem.setAttribute('alt', 'img' + listImages[i].id);
-						itemSlide.appendChild(imgItem);
+						itemSlide.appendChild(containerImg);
+						containerImg.appendChild(imgItem)
 						imageBlockEle.appendChild(itemSlide);
 					}
 				}
