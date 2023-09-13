@@ -122,7 +122,7 @@
 		<!-- Header -->
 		<!-- Nav Menu -->
 
-		<section class="nav-menu fixed-top">
+		<div class="nav-menu fixed-top">
 			<ul id="dropdown-menu" class="nav-menu__block-dropdown">
 				<li class="nav-item">
 					<a href="#intro-block" class="active">giới thiệu</a>
@@ -168,9 +168,9 @@
 					<img src="public/assets/icons/login icon.png" alt="menu-icon" />
 				</li>
 			</ul>
-		</section>
+		</div>
 
-		<section class="main">
+		<div class="main">
 			<!-- left -->
 			<div class="main__left">
 				<div class="text">
@@ -770,9 +770,9 @@
 				</div>
 				<img src="public/assets/icons/disk icon.png" alt="disk icon" />
 			</div>
-		</section>
+		</div>
 
-		<section class="footer">
+		<div class="footer">
 			<h1 class="title">section cảm ơn sponsor</h1>
 			<div class="end-footer hide-mobile">
 				<div class="logo">
@@ -830,7 +830,7 @@
 					Copyright © 2023 CMAZOR. All rights reserved.
 				</div>
 			</div>
-		</section>
+		</div>
 
 		<!-- Modal -->
 		<div
@@ -1150,10 +1150,8 @@
 			}
 
 			// Animation Scroll
-			const mainCenter = document.querySelector('.main__center');
-
-			if (mainCenter) {
-				mainCenter.addEventListener('scroll', () => {
+			if (document) {
+				document.addEventListener('scroll', () => {
 					handleScroll();
 					activeMenu();
 				});
@@ -1177,7 +1175,6 @@
 						if (entry.isIntersecting) {
 							const fadeInElement = entry.target;
 							fadeInElement.classList.add('animate');
-
 							const animateCenterEle =
 								fadeInElement.querySelectorAll('.animate__center');
 							const animateLeftEle =
@@ -1212,46 +1209,41 @@
 					observer.observe(element);
 				});
 			}
-
-			window.addEventListener('load', () => {
-				window.scrollTo({
-					top: 0,
-					behavior: 'smooth' // Use smooth scrolling animation
-				});
-			})
+			
 			// Attach the scroll event listener
-			window.addEventListener('scroll', handleScroll);
 			function activeMenu() {
-				var sections = document.querySelectorAll('.main__center section');
-				var scrollDistance = $(mainCenter).scrollTop();
-				for (var i = 0; i < sections.length; i++) {
-					var section = sections[i];
-					if (section.offsetTop <= scrollDistance) {
-						var navLinks = document.querySelectorAll(
-							'.main__right__menu .nav-item a'
-						);
-						var navLinksFixed = document.querySelectorAll(
-							'.nav-menu__block-dropdown .nav-item a'
-						);
-						for (var j = 0; j < navLinks.length; j++) {
-							navLinks[j].classList.remove('active');
-						}
-						for (var j = 0; j < navLinksFixed.length; j++) {
-							navLinksFixed[j].classList.remove('active');
-						}
-						var activeLink = document.querySelector(
-							'.main__right__menu .nav-item a[href="#' + section.id + '"]'
-						);
-						if (activeLink) {
-							activeLink.classList.add('active');
-						}
-						var activeLinkFixed = document.querySelector(
-							'.nav-menu__block-dropdown .nav-item a[href="#' +
-								section.id +
-								'"]'
-						);
-						if (activeLinkFixed) {
-							activeLinkFixed.classList.add('active');
+				var sections = document.querySelectorAll('section');
+				var scrollDistance = document.documentElement.scrollTop;
+				if (sections.length && scrollDistance) {
+						for (var i = 0; i < sections.length; i++) {
+						var section = sections[i];
+						if (section.offsetTop <= scrollDistance + 10) {
+							var navLinks = document.querySelectorAll(
+								'.main__right__menu .nav-item a'
+							);
+							var navLinksFixed = document.querySelectorAll(
+								'.nav-menu__block-dropdown .nav-item a'
+							);
+							for (var j = 0; j < navLinks.length; j++) {
+								navLinks[j].classList.remove('active');
+							}
+							for (var j = 0; j < navLinksFixed.length; j++) {
+								navLinksFixed[j].classList.remove('active');
+							}
+							var activeLink = document.querySelector(
+								'.main__right__menu .nav-item a[href="#' + section.id + '"]'
+							);
+							if (activeLink) {
+								activeLink.classList.add('active');
+							}
+							var activeLinkFixed = document.querySelector(
+								'.nav-menu__block-dropdown .nav-item a[href="#' +
+									section.id +
+									'"]'
+							);
+							if (activeLinkFixed) {
+								activeLinkFixed.classList.add('active');
+							}
 						}
 					}
 				}

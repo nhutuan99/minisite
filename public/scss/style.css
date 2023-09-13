@@ -136,7 +136,6 @@ body {
 
 .main {
   width: 100%;
-  overflow: hidden;
   display: flex;
   padding-bottom: 3%;
   justify-content: space-between;
@@ -144,6 +143,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-image: url("../assets/images/BG_1920x1080.jpg");
+  overflow: hidden;
 }
 .main__left {
   width: 6%;
@@ -168,7 +168,6 @@ body {
   margin: 0 auto;
   padding-top: 144px;
   padding-bottom: 32px;
-  overflow-x: scroll !important;
 }
 .main__center__intro {
   margin-bottom: 3%;
