@@ -1161,6 +1161,13 @@
 				}, 0);
 			}
 
+			window.addEventListener('load', () => {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth' // Use smooth scrolling animation
+				});
+			})
+
 			function handleScroll() {
 				const fadeInElements = document.querySelectorAll('.fade-in');
 
