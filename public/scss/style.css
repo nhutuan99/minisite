@@ -162,7 +162,7 @@ body {
 .main__center__intro .description {
   color: #fff;
   font-size: 16px;
-  padding: 0 15%;
+  padding: 0 10%;
   text-align: center;
 }
 .main__center__intro .arrow-down {
@@ -184,7 +184,7 @@ body {
   max-width: 100%;
 }
 .main__center__about-album .left p.description {
-  padding-left: 30%;
+  padding-left: 20%;
   font-weight: 300;
   font-size: 16px;
   color: #fff;
@@ -729,7 +729,7 @@ body {
 
 @media screen and (min-width: 1850px) {
   .main__center__timeline .all-content {
-    padding: 0 15%;
+    padding: 0 10%;
   }
 }
 @media screen and (max-width: 1650px) {
@@ -839,14 +839,21 @@ body {
   }
 }
 @media screen and (max-width: 992px) {
-  .nav-menu__block #btn-dropdown, .nav-menu__block #btn-account {
-    width: 50px;
+  .nav-menu__block #btn-dropdown {
+    width: 35px;
   }
-  .nav-menu__block #btn-dropdown img, .nav-menu__block #btn-account img {
+  .nav-menu__block #btn-dropdown img {
+    width: 100%;
+  }
+  .nav-menu__block #btn-account {
+    width: 25px;
+    margin-left: 10px;
+  }
+  .nav-menu__block #btn-account img {
     max-width: 100%;
   }
   .nav-menu__block #btn-logo {
-    width: 120px;
+    width: 110px;
   }
   .nav-menu__block #btn-logo img {
     max-width: 100%;
@@ -878,8 +885,7 @@ body {
     width: 64px;
   }
   .main__center__timeline .all-content .content .time .line {
-    height: 31px;
-    transform: translate(32px, 0px);
+    transform: translate(31px, 0px);
   }
   .main__center__timeline .all-content .content .event {
     min-width: 230px;
@@ -1057,12 +1063,13 @@ body {
   .main__center__timeline .all-content .content {
     height: 120px;
     justify-content: center;
+    align-items: center;
   }
   .main__center__timeline .all-content .content .time {
     margin-right: 3%;
   }
   .main__center__timeline .all-content .content .time .line {
-    height: 31px;
+    display: none;
   }
   .main__center__timeline .all-content .content .event {
     min-width: 230px;
