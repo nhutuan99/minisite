@@ -43,7 +43,7 @@ body {
   height: 100%;
   font-family: "SVN Poppins", sans-serif;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-image: url("../assets/images/BG_1920x1080.jpg");
   background-color: #0b0b0b;
 }
@@ -609,9 +609,21 @@ body {
 .footer h1.title {
   font-size: 24px;
   font-weight: 300;
-  color: #fff;
+  color: #2f3547;
   text-align: center;
   margin-top: 24px;
+}
+.footer .co-development-logo {
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer .co-development-logo__box-img img {
+  max-width: 100%;
 }
 .footer .end-footer {
   display: flex;
@@ -840,6 +852,9 @@ body {
   .main__center__social .box-social .background .wrapper-social {
     top: 18%;
     max-width: 100%;
+  }
+  .footer .co-development-logo {
+    width: 100%;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1102,10 +1117,17 @@ body {
     font-size: 18px;
     padding-bottom: 10%;
   }
+  .footer .co-development-logo {
+    width: 100%;
+  }
+  .footer .co-development-logo__box-img {
+    width: 65px;
+  }
   .footer .end-footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 20%;
     padding-bottom: 15%;
   }
   .footer .end-footer .icon-social {

@@ -79,12 +79,11 @@
 				user-select: none;
 				font-size: 18px;
 			}
-			.main__center .footer {
-				margin-top: 10%;
-			}
 			.form-group #inputEmail {
 				height: 50px;
-				margin: 20px auto;
+				margin-top: 3%;
+				margin-left: auto;
+				margin-right: auto;
 				border-radius: 40px;
 				color: white;
 				background-color: #090909;
@@ -188,7 +187,7 @@
 		<!-- Header -->
 		<!-- Nav Menu -->
 
-		<section class="nav-menu fixed-top">
+		<div class="nav-menu fixed-top">
 			<ul id="dropdown-menu" class="nav-menu__block-dropdown">
 				<li class="nav-item">
 					<a href="index.html" class="active">giới thiệu</a>
@@ -240,9 +239,9 @@
 					<img src="public/assets/icons/login icon.png" alt="menu-icon" />
 				</li>
 			</ul>
-		</section>
+		</div>
 
-		<section class="main">
+		<div class="main">
 			<!-- left -->
 			<div class="main__left">
 				<div class="text">
@@ -318,62 +317,6 @@
 						</span>
 					</a>
 				</div>
-				<div class="footer fade-in">
-					<h1 class="title">Đăng ký nhận thông tin</h1>
-					<form>
-						<div class="form-group animate__center">
-							<input
-								type="text"
-								class="form-control"
-								id="inputEmail"
-								placeholder="Email của bạn"
-							/>
-							<div
-								class="btn-send animate__center"
-								type="submit"
-								data-toggle="modal"
-								data-target="#ThankYouCam"
-							>
-								<span>
-									Đăng ký
-									<i class="fa-solid fa-arrow-right ml-2"> </i>
-								</span>
-							</div>
-						</div>
-					</form>
-					<div class="end-footer hide-mobile">
-						<div class="logo">
-							<img src="public/assets/images/logo Cmazor.png" alt="logo" />
-						</div>
-						<div class="copyright">
-							Copyright © 2023 CMAZOR. All rights reserved.
-						</div>
-						<div class="icon-social">
-							<img
-								class="mr-3"
-								src="public/assets/icons/facebook.png"
-								alt="facebook"
-							/>
-							<img src="public/assets/icons/instagram.png" alt="instagram" />
-						</div>
-					</div>
-					<div class="end-footer show-mobile">
-						<div class="logo">
-							<img src="public/assets/images/logo Cmazor.png" alt="logo" />
-						</div>
-						<div class="icon-social">
-							<img
-								class="mr-3"
-								src="public/assets/icons/facebook.png"
-								alt="facebook"
-							/>
-							<img src="public/assets/icons/instagram.png" alt="instagram" />
-						</div>
-						<div class="copyright">
-							Copyright © 2023 CMAZOR. All rights reserved.
-						</div>
-					</div>
-				</div>
 			</div>
 			<!-- right -->
 			<div class="main__right">
@@ -400,7 +343,88 @@
 				</div>
 				<img src="public/assets/icons/disk icon.png" alt="disk icon" />
 			</div>
-		</section>
+		</div>
+
+		<div class="footer fade-in">
+			<h1 class="title text-white">Đăng ký nhận thông tin</h1>
+			<form>
+				<div class="form-group">
+					<input
+						type="text"
+						class="form-control"
+						id="inputEmail"
+						placeholder="Email của bạn"
+					/>
+					<div
+						class="btn-send"
+						type="submit"
+						data-toggle="modal"
+						data-target="#ThankYouCam"
+					>
+						<span>
+							Đăng ký
+							<i class="fa-solid fa-arrow-right ml-2"> </i>
+						</span>
+					</div>
+				</div>
+			</form>
+			<div class="end-footer hide-mobile">
+				<div class="logo">
+					<img src="public/assets/images/logo Cmazor.png" alt="logo" />
+				</div>
+				<div class="copyright">
+					Copyright © 2023 CMAZOR. All rights reserved.
+				</div>
+				<div class="icon-social">
+					<a
+						href="https://www.facebook.com/orangeofficial97"
+						target="_blank"
+						style="text-decoration: none"
+					>
+						<img
+							class="mr-3"
+							src="public/assets/icons/facebook.png"
+							alt="facebook"
+						/>
+					</a>
+					<a
+						href="https://www.instagram.com/orange.97_/"
+						target="_blank"
+						style="text-decoration: none"
+					>
+						<img src="public/assets/icons/instagram.png" alt="instagram" />
+					</a>
+				</div>
+			</div>
+			<div class="end-footer show-mobile">
+				<div class="logo">
+					<img src="public/assets/images/logo Cmazor.png" alt="logo" />
+				</div>
+				<div class="icon-social">
+					<a
+						href="https://www.facebook.com/orangeofficial97"
+						target="_blank"
+						style="text-decoration: none"
+					>
+						<img
+							class="mr-3"
+							src="public/assets/icons/facebook.png"
+							alt="facebook"
+						/>
+					</a>
+					<a
+						href="https://www.instagram.com/orange.97_/"
+						target="_blank"
+						style="text-decoration: none"
+					>
+						<img src="public/assets/icons/instagram.png" alt="instagram" />
+					</a>
+				</div>
+				<div class="copyright">
+					Copyright © 2023 CMAZOR. All rights reserved.
+				</div>
+			</div>
+		</div>
 
 		<div
 			class="modal fade"
@@ -449,11 +473,11 @@
 					btnDropdown.onclick = () => {
 						dropDownMenu.style.display = 'block';
 						btnXMenu.style.display = 'block';
-						main.style.visibility = 'hidden';
+						main.style.opacity = '0';
 						btnXMenu.onclick = () => {
 							dropDownMenu.style.display = 'none';
 							btnXMenu.style.display = 'none';
-							main.style.visibility = 'visible';
+							main.style.opacity = '1';
 						};
 					};
 				}
@@ -462,11 +486,11 @@
 					btnAccount.onclick = () => {
 						dropAccount.style.display = 'block';
 						btnXAccount.style.display = 'block';
-						main.style.visibility = 'hidden';
+						main.style.opacity = '0';
 						btnXAccount.onclick = () => {
 							dropAccount.style.display = 'none';
 							btnXAccount.style.display = 'none';
-							main.style.visibility = 'visible';
+							main.style.opacity = '1';
 						};
 					};
 				}
@@ -490,10 +514,20 @@
 			});
 
 			// Animation Scroll
-			const mainCenter = document.querySelector('.main__center');
-			mainCenter?.addEventListener('scroll', () => {
-				handleScroll();
-			});
+			if (document) {
+				document.addEventListener('scroll', () => {
+					handleScroll();
+				});
+			}
+
+			window.addEventListener('load', () => {
+				if (!window.location.hash) {
+						window.scrollTo({
+						top: 0,
+						behavior: 'smooth' // Use smooth scrolling animation
+					});
+				}
+			})
 
 			function handleScroll() {
 				const fadeInElements = document.querySelectorAll('.fade-in');

@@ -773,7 +773,21 @@
 		</div>
 
 		<div class="footer">
-			<h1 class="title">section cảm ơn sponsor</h1>
+			<h1 class="title">Special thanks to</h1>
+			<div class="co-development-logo">
+				<div class="co-development-logo__box-img">
+					<img src="public/assets/images/footer/DAWN.png" alt="co-development-logo"/>
+				</div>
+				<div class="co-development-logo__box-img">
+					<img src="public/assets/images/footer/1967.png" alt="co-development-logo"/>
+				</div>
+				<div class="co-development-logo__box-img">
+					<img src="public/assets/images/footer/NGOAMEDIA.png" alt="co-development-logo"/>
+				</div>
+				<div class="co-development-logo__box-img">
+					<img src="public/assets/images/footer/VINAMA.png" alt="co-development-logo"/>
+				</div>
+			</div>
 			<div class="end-footer hide-mobile">
 				<div class="logo">
 					<img src="public/assets/images/logo Cmazor.png" alt="logo" />
@@ -922,11 +936,11 @@
 					btnDropdown.onclick = () => {
 						dropDownMenu.style.display = 'block';
 						btnXMenu.style.display = 'block';
-						main.style.visibility = 'hidden';
+						main.style.opacity = '0';
 						btnXMenu.onclick = () => {
 							dropDownMenu.style.display = 'none';
 							btnXMenu.style.display = 'none';
-							main.style.visibility = 'visible';
+							main.style.opacity = '1';
 						};
 					};
 				}
@@ -935,11 +949,11 @@
 					btnAccount.onclick = () => {
 						dropAccount.style.display = 'block';
 						btnXAccount.style.display = 'block';
-						main.style.visibility = 'hidden';
+						main.style.opacity = '0';
 						btnXAccount.onclick = () => {
 							dropAccount.style.display = 'none';
 							btnXAccount.style.display = 'none';
-							main.style.visibility = 'visible';
+							main.style.opacity = '1';
 						};
 					};
 				}
@@ -958,7 +972,7 @@
 
 						dropDownMenu.style.display = 'none';
 						dropAccount.style.display = 'none';
-						main.style.visibility = 'visible';
+						main.style.opacity = 'visible';
 
 						// Add active class to the clicked link
 						document.querySelectorAll('.nav-item a').forEach((item) => {
@@ -1162,10 +1176,12 @@
 			}
 
 			window.addEventListener('load', () => {
-				window.scrollTo({
-					top: 0,
-					behavior: 'smooth' // Use smooth scrolling animation
-				});
+				if (!window.location.hash) {
+						window.scrollTo({
+						top: 0,
+						behavior: 'smooth' // Use smooth scrolling animation
+					});
+				}
 			})
 
 			function handleScroll() {
