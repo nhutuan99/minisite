@@ -60,6 +60,12 @@
 				padding: 20px;
 				background-color: #000;
 			}
+			.read-mess-modal .modal-content {
+				min-height: 450px;
+				max-height: 550px;
+				overflow-x: scroll;
+				padding: 30px;
+			}
 			.modal-title {
 				color: #fff;
 				font-weight: 300;
@@ -72,7 +78,11 @@
 				font-size: 24px;
 			}
 			.modal-body {
+				color: #fff;
 				background-color: #000;
+			}
+			.modal-body .author {
+				color: #1b1e26 !important;
 			}
 			.modal-body .form-group {
 				display: flex;
@@ -131,6 +141,7 @@
 				<li class="nav-item"><a href="#image-block">hình ảnh</a></li>
 				<li class="nav-item"><a href="#send-mess-block">gửi thư</a></li>
 				<li class="nav-item"><a href="#count-down-block">countdown</a></li>
+				<li class="nav-item"><a href="#streaming-block">streaming</a></li>
 				<li class="nav-item">đăng nhập</li>
 				<div class="btn-x-menu mb-4">
 					<img src="public/assets/icons/X icon.png" alt="x-icon" />
@@ -351,7 +362,7 @@
 							Showcase
 						</div>
 					</div>
-					<div class="all-content show-mobile fade-in">
+					<div class="all-content show-mobile">
 						<div class="content" data-date="2023-08-30T23:59:00">
 							<div class="time">
 								<div class="time-box">
@@ -496,68 +507,6 @@
 					<h1 class="title">Trạm cảm xúc</h1>
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide animate__left">
-								<div class="col">
-									<h1>from: .........</h1>
-									<p>
-										Gửi Cam của em, Em đã từng là một đứa lầm lì, không dám tiếp
-										xúc nhiều với thế giới bên ngoài. Nhưng bỗng một ngày em
-										nghe được âm nhạc của Cam, tìm hiểu về Cam, em cảm thấy mình
-										được đồng cảm và thấu hiểu. Cam cũng từng rụt rè, nhút nhát
-										như em, nhưng bây giờ Cam đã là một cô gái vui vẻ, hoạt
-										ngôn, hài hước. Em cảm thấy mình được truyền nguồn năng
-										lượng tích cực từ Cam, cảm ơn Cam vì đã luôn cố gắng hoàn
-										thiện bản thân. Em chúc Cam sẽ luôn giữ được năng lượng tích
-										cực ấy, và những sản phẩm âm nhạc của Cam sẽ ngày càng được
-										nhiều người đón nhận hơn! Yêu chị.
-									</p>
-								</div>
-							</div>
-							<div class="swiper-slide animate__right">
-								<div class="col">
-									<h1>from: .........</h1>
-									<p>
-										Đã có lúc, em từng không thân thiết với bà của mình vì bà và
-										em có cách biệt quá lớn về thế hệ. Song sau những chia sẻ từ
-										chị, em đã tập lắng nghe, tập thấu hiểu nhiều hơn. m nhạc
-										của chị như một người bạn bên cạnh em, giúp biết sống chậm
-										lại, trân trọng những khoảnh khắc bên người thân. Cảm ơn chị
-										thật nhiều, mong rằng chị sẽ tiếp tục con đường của mình,
-										chúc chị sẽ gặt hái thật nhiều thành công. Fan của chị
-									</p>
-								</div>
-							</div>
-							<div class="swiper-slide animate__left">
-								<div class="col">
-									<h1>from: .........</h1>
-									<p>
-										Gửi Cam của em, Em đã từng là một đứa lầm lì, không dám tiếp
-										xúc nhiều với thế giới bên ngoài. Nhưng bỗng một ngày em
-										nghe được âm nhạc của Cam, tìm hiểu về Cam, em cảm thấy mình
-										được đồng cảm và thấu hiểu. Cam cũng từng rụt rè, nhút nhát
-										như em, nhưng bây giờ Cam đã là một cô gái vui vẻ, hoạt
-										ngôn, hài hước. Em cảm thấy mình được truyền nguồn năng
-										lượng tích cực từ Cam, cảm ơn Cam vì đã luôn cố gắng hoàn
-										thiện bản thân. Em chúc Cam sẽ luôn giữ được năng lượng tích
-										cực ấy, và những sản phẩm âm nhạc của Cam sẽ ngày càng được
-										nhiều người đón nhận hơn! Yêu chị.
-									</p>
-								</div>
-							</div>
-							<div class="swiper-slide animate__right">
-								<div class="col">
-									<h1>from: .........</h1>
-									<p>
-										Đã có lúc, em từng không thân thiết với bà của mình vì bà và
-										em có cách biệt quá lớn về thế hệ. Song sau những chia sẻ từ
-										chị, em đã tập lắng nghe, tập thấu hiểu nhiều hơn. m nhạc
-										của chị như một người bạn bên cạnh em, giúp biết sống chậm
-										lại, trân trọng những khoảnh khắc bên người thân. Cảm ơn chị
-										thật nhiều, mong rằng chị sẽ tiếp tục con đường của mình,
-										chúc chị sẽ gặt hái thật nhiều thành công. Fan của chị
-									</p>
-								</div>
-							</div>
 							<!-- Add more swiper-slide divs for additional items -->
 						</div>
 						<!-- Add pagination and navigation elements if needed -->
@@ -629,7 +578,7 @@
 						</div>
 					</div>
 				</section>
-				<div class="main__center__social fade-in">
+				<section id="streaming-block" class="main__center__social fade-in">
 					<div class="box-social">
 						<h1 class="title">Download / Stream Album</h1>
 						<div class="background">
@@ -748,8 +697,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				
+				</section>
 			</div>
 			<!-- right -->
 			<div class="main__right">
@@ -764,6 +712,7 @@
 					<li class="nav-item"><a href="#image-block">hình ảnh</a></li>
 					<li class="nav-item"><a href="#send-mess-block">gửi thư</a></li>
 					<li class="nav-item"><a href="#count-down-block">countdown</a></li>
+					<li class="nav-item"><a href="#streaming-block">streaming</a></li>
 				</ul>
 				<div class="main__right__icon">
 					<i class="fa-solid fa-chevron-down"></i>
