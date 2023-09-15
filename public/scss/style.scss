@@ -771,7 +771,19 @@ body {
 			}
 		}
 	}
-	
+}
+
+@media screen and (max-width: 1450px) {
+	.main__center__social {
+		.box-social {
+			.background {
+				.wrapper-social {
+					top: 22%;
+					max-width: 100%;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 1350px) {
