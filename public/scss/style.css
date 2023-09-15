@@ -985,6 +985,9 @@ body {
     top: 22%;
     max-width: 100%;
   }
+  .swiper-slide .container-img {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 1350px) {
