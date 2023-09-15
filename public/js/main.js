@@ -246,7 +246,7 @@ window.addEventListener("DOMContentLoaded", () => {
                                 <div class="modal-wrapper">
                                   <div class="modal-content">
                                     <div class="modal-header text-right">
-                                      <h5></h5>
+                                      <h1 class="author">from: ${sendMessList[i].author}</h1>
                                       <div
                                         type="button"
                                         class="btn-x-menu text-right"
@@ -257,7 +257,6 @@ window.addEventListener("DOMContentLoaded", () => {
                                       </div>
                                     </div>
                                     <div class="modal-body">
-                                      <h1 class="author">from: ${sendMessList[i].author}</h1>
                                       <p>${sendMessList[i].content}</p>
                                     </div>
                                   </div>
