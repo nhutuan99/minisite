@@ -1174,6 +1174,10 @@ body {
   .main__center__social .box-social h1.title {
     font-size: 16px;
   }
+  .main__center__social .box-social .background img {
+    padding: 15px;
+    padding-top: 0;
+  }
   .main__center__social .box-social .background .wrapper-social {
     position: static;
     max-width: 100%;
